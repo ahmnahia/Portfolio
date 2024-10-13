@@ -15,8 +15,8 @@ export default function Hero() {
             <p className="mt-10 text-xl leading-6 text-zinc-600 dark:text-zinc-400 font-bold">
               I like full stack development :).
             </p>
-            <button className="mt-10 md:mt-20  bottom-0 p-4 bg-blue-400 dark:bg-orange-400 group hover:bg-blue-900 text-white rounded-md flex items-center gap-3 transition-colors delay-75 dark:text-orange-100">
-              <FaCircleArrowDown className="text-blue-100 dark:text-orange-100 group-hover:text-blue-400 transition-colors delay-75  text-xl " />
+            <button className="mt-10 md:mt-20  bottom-0 p-4 bg-blue-400 dark:bg-orange-400 group hover:bg-blue-900 dark:hover:bg-orange-700 text-white rounded-md flex items-center gap-3 transition-colors delay-75 dark:text-orange-100">
+              <FaCircleArrowDown className="text-blue-100 dark:text-orange-100 group-hover:text-blue-400 dark:group-hover:text-orange-100 transition-colors delay-75  text-xl " />
               More About Me
             </button>
           </div>
