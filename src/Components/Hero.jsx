@@ -1,6 +1,6 @@
 import LottieAnimation from "@/Components/LottieAnimation";
-import Image from "next/image";
 import { FaCircleArrowDown } from "react-icons/fa6";
+
 
 export default function Hero() {
   return (
@@ -9,14 +9,14 @@ export default function Hero() {
         <div className="flex flex-wrap max-md:flex-col-reverse max-md:pt-10   md:gap-20 ">
           <div className="max-md:mt-10 md:flex-1 relative md:min-h-[300px]">
             <p className="max-sm:text-[40px] max-lg:text-[60px] lg:text-[68px] text-black ">
-              <span className="">Hi, I&aposm </span>{" "}
-              <span className="text-blue-600"> Ahmad</span>{" "}
+              <span className="dark:text-white">Hi, I{"'"}m </span>{" "}
+              <span className="text-blue-600 dark:text-orange-400"> Ahmad</span>{" "}
             </p>
-            <p className="mt-10 text-xl leading-6 text-zinc-600 font-bold">
+            <p className="mt-10 text-xl leading-6 text-zinc-600 dark:text-zinc-400 font-bold">
               I like full stack development :).
             </p>
-            <button className="mt-10 md:mt-20  bottom-0 p-4 bg-blue-400 group hover:bg-blue-900 text-white rounded-md flex items-center gap-3 transition-colors delay-75">
-              <FaCircleArrowDown className="text-blue-100 group-hover:text-blue-400 transition-colors delay-75  text-xl " />
+            <button className="mt-10 md:mt-20  bottom-0 p-4 bg-blue-400 dark:bg-orange-400 group hover:bg-blue-900 text-white rounded-md flex items-center gap-3 transition-colors delay-75 dark:text-orange-100">
+              <FaCircleArrowDown className="text-blue-100 dark:text-orange-100 group-hover:text-blue-400 transition-colors delay-75  text-xl " />
               More About Me
             </button>
           </div>

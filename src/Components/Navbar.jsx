@@ -1,26 +1,29 @@
 "use client";
 import { useState } from "react";
 import { navbarSections } from "@/constants";
-import Image from "next/image";
-import { icons } from "@/constants";
+import { MdMenu, MdClose } from "react-icons/md";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full h-[70px] bg-blue-50 mx-auto fixed z-10">
+    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10">
       <div className="h-full container-cus mx-auto flex justify-between items-center text-black">
         <div className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer">
-          <span className="text-gray-500">{"<"}</span>
-          <span className="text-blue-500">AhmadAbounahia </span>{" "}
-          <span className="text-gray-500">/{">"}</span>
+          <span className="text-gray-500 dark:text-gray-200">{"<"}</span>
+          <span className="text-blue-500 dark:text-orange-400">
+            AhmadAbounahia{" "}
+          </span>{" "}
+          <span className="text-gray-500 dark:text-gray-200">/{">"}</span>
         </div>
-        <div className="">
+        <div className="flex items-center gap-3 md:gap-10">
+          <ThemeToggle />
           <div className="max-lg:hidden flex gap-10">
             {navbarSections.map((eachSection, idx) => (
               <div
                 key={idx}
-                className=" text-xl hover:text-red-500 hover:scale-105 hover:cursor-pointer"
+                className=" text-xl dark:text-white hover:scale-105 hover:cursor-pointer"
               >
                 {eachSection}
               </div>
@@ -32,20 +35,21 @@ export default function Navbar() {
               setMobileMenuOpen(!mobileMenuOpen);
             }}
           >
-            <Image
-              className={`w-8 text-red-50 ${mobileMenuOpen ? "hidden" : ""}`}
-              src={icons.iconMenu}
+            <MdMenu
+              className={`text-4xl text-black dark:text-white ${
+                mobileMenuOpen ? "hidden" : ""
+              }`}
               alt="Menu Icon"
             />
-            <Image
-            alt="Close Icon"
-              className={`w-12 translate-x-2 text-red-50  ${
+            <MdClose
+              alt="Close Icon"
+              className={`text-4xl dark:text-white   text-black  ${
                 mobileMenuOpen ? "" : "hidden"
               }`}
-              src={icons.iconClose}
             />
+
             <div
-              className={` w-[170px] bg-white rounded-md absolute top-[70px] right-[0px] ease-in duration-300 transition-transform ${
+              className={` w-[170px] bg-white dark:bg-zinc-700 dark:text-zinc-200 rounded-md absolute top-[70px] right-[0px] ease-in duration-300 transition-transform ${
                 mobileMenuOpen ? "translate-x-[0]" : "translate-x-[200%]"
               }`}
             >

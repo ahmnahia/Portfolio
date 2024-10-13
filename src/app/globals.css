@@ -14,4 +14,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .dark .hero-div-bg {
+    background: url("../public/svgs/HeroDark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
