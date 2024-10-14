@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .container-cus {
+  /* .container-cus {
     @apply px-3 lg:max-w-[1750px] md:px-32;
+  } */
+  .cus-color-transition {
+    @apply transition-colors duration-300;
   }
 }
 
@@ -17,6 +20,12 @@
 
   .dark .hero-div-bg {
     background: url("../public/svgs/HeroDark.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .aboutme-bg {
+    background: url("../public/svgs/AboutMe.svg");
     background-repeat: no-repeat;
     background-size: cover;
   }

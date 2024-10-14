@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10">
-      <div className="h-full container-cus mx-auto flex justify-between items-center text-black">
+      <div className="h-full container mx-auto flex justify-between items-center text-black">
         <div className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer">
           <span className="text-gray-500 dark:text-gray-200">{"<"}</span>
           <span className="text-blue-500 dark:text-orange-400">
@@ -21,12 +21,13 @@ export default function Navbar() {
           <ThemeToggle />
           <div className="max-lg:hidden flex gap-10">
             {navbarSections.map((eachSection, idx) => (
-              <div
+              <a
                 key={idx}
                 className=" text-xl dark:text-white hover:scale-105 hover:cursor-pointer"
+                href={eachSection.href}
               >
-                {eachSection}
-              </div>
+                {eachSection.name}
+              </a>
             ))}
           </div>
           <div
@@ -59,12 +60,13 @@ export default function Navbar() {
                 }`}
               >
                 {navbarSections.map((eachSection, idx) => (
-                  <div
+                  <a
                     key={idx}
-                    className=" text-xl hover:text-red-500 hover:scale-105 hover:cursor-pointer"
+                    className=" text-xl hover:scale-105 hover:cursor-pointer"
+                    href={eachSection.href}
                   >
-                    {eachSection}
-                  </div>
+                    {eachSection.name}
+                  </a>
                 ))}
               </div>
             </div>
