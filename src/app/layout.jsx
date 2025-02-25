@@ -20,11 +20,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="!scroll-smooth dark:bg-zinc-900"
+      suppressHydrationWarning
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-extrabold`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
