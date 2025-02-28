@@ -12,6 +12,44 @@
 }
 
 @layer utilities {
+  .left-to-right-b-onhover {
+    position: relative;
+    padding-bottom: 3px;
+  }
+
+  .left-to-right-b-onhover:before {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .left-to-right-b-onhover:hover:before {
+    width: 100%;
+  }
+
+  .nav-bar-sec .nav-item {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-bar-sec .nav-item:before {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .nav-bar-sec .nav-item:hover:before {
+    width: 100%;
+  }
+
   .hero-div-bg {
     background: url("/public/svgs/Hero.svg");
     background-repeat: no-repeat;
@@ -80,10 +118,9 @@
   }
 
   @media (max-width: 1000px) {
-  .about-sec-title::after {
-    transform: translate(-70px, -80px);
-  
-  }
+    .about-sec-title::after {
+      transform: translate(-70px, -80px);
+    }
   }
 }
 

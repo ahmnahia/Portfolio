@@ -8,13 +8,13 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10">
+    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10 nav-bar-sec">
       <div className="h-full container mx-auto flex justify-between items-center text-black">
-        <div className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer">
+        <div className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600">
           <span className="text-gray-500 dark:text-gray-200">{"<"}</span>
-          <span className="text-blue-500 dark:text-orange-400">
-            AhmadAbounahia{" "}
-          </span>{" "}
+          <span className="text-blue-500 dark:text-orange-600">
+            AhmadAbounahia
+          </span>
           <span className="text-gray-500 dark:text-gray-200">/{">"}</span>
         </div>
         <div className="flex items-center gap-3 md:gap-10">
@@ -23,7 +23,7 @@ export default function Navbar() {
             {navbarSections.map((eachSection, idx) => (
               <a
                 key={idx}
-                className=" text-xl dark:text-white hover:scale-105 hover:cursor-pointer"
+                className="text-xl dark:text-white hover:scale-105 cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600"
                 href={eachSection.href}
               >
                 {eachSection.name}

@@ -14,7 +14,7 @@ export function CarouselComponent() {
         {technologiesUsed.map((eachTech, idx) => (
           <div
             key={idx}
-            className="text-xl  items-center  gap-5 max-md:w-fit max-md:px-10 w-[230px] bg-blue-50 dark:bg-zinc-700 ps-4 max-md:ps-2 py-4 rounded-xl shadow-md hover:shadow-lg shadow-blue-grey-200 dark:shadow-zinc-900 border-l-4 border-blue-600 dark:border-orange-600 cus-color-transition hover:scale-110 mx-4 inline-block h-16"
+            className="text-xl  items-center  gap-5 max-md:w-fit max-md:px-10 w-[230px] bg-blue-50 dark:bg-zinc-800 ps-4 max-md:ps-2 py-4 rounded-xl shadow-md shadow-blue-grey-200 dark:shadow-zinc-900 border-l-4 border-blue-600 dark:border-orange-600 cus-color-transition hover:scale-110 transition-transform ease-in-out mx-4 inline-block "
           >
             <div className="flex items-center gap-2">
               <span className="text-[35px] text-blue-900 dark:text-zinc-50 cus-color-transition">
@@ -32,7 +32,7 @@ export function CarouselComponent() {
         {technologiesUsed.map((eachTech, idx) => (
           <div
             key={idx}
-            className="text-xl  items-center  gap-5 max-md:w-fit max-md:px-10 w-[230px] bg-blue-50 dark:bg-zinc-700 ps-4 max-md:ps-2 py-4 rounded-xl shadow-md hover:shadow-lg shadow-blue-grey-200 dark:shadow-zinc-900 border-l-4 border-blue-600 dark:border-orange-600 cus-color-transition hover:scale-110 mx-4 inline-block h-16"
+            className="text-xl  items-center  gap-5 max-md:w-fit max-md:px-10 w-[230px] bg-blue-50 dark:bg-zinc-800 ps-4 max-md:ps-2 py-4 rounded-xl shadow-md shadow-blue-grey-200 dark:shadow-zinc-900 border-l-4 border-blue-600 dark:border-orange-600 cus-color-transition hover:scale-110 transition-transform ease-in-out mx-4 inline-block "
           >
             <div className="flex items-center gap-2">
               <span className="text-[35px] text-blue-900 dark:text-zinc-50 cus-color-transition">

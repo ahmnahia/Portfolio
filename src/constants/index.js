@@ -11,8 +11,8 @@ import { DiNodejs } from "react-icons/di";
 
 export const navbarSections = [
   { name: "About", href: "#about-me-section" },
-  { name: "Projects", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export const technologiesUsed = [

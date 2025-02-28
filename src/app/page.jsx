@@ -3,6 +3,8 @@ import Hero from "@/Components/Hero";
 import AboutMe from "@/Components/AboutMe";
 import Hero2 from "@/Components/2/Hero";
 import AboutMe2 from "@/Components/2/AboutMe2";
+import Work from "@/Components/Work";
+import Contact from "@/Components/Contact";
 export default function Home() {
   return (
     <div className="">
@@ -12,6 +14,8 @@ export default function Home() {
         <Hero2 />
         {/* <AboutMe /> */}
         <AboutMe2 />
+        <Work />
+        <Contact />
       </main>
       <footer className=""></footer>
     </div>
