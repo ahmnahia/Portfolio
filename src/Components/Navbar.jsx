@@ -7,10 +7,23 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    const section = document.querySelector(id);
+    window.scrollTo({
+      top: section.offsetTop - 100,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10 nav-bar-sec">
       <div className="h-full container mx-auto flex justify-between items-center text-black">
-        <div className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600">
+        <div
+          className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600"
+          onClick={() => {
+            scrollToSection("#hero");
+          }}
+        >
           <span className="text-gray-500 dark:text-gray-200">{"<"}</span>
           <span className="text-blue-500 dark:text-orange-600">
             AhmadAbounahia
@@ -24,7 +37,10 @@ export default function Navbar() {
               <a
                 key={idx}
                 className="text-xl dark:text-white hover:scale-105 cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600"
-                href={eachSection.href}
+                // href={eachSection.href}
+                onClick={() => {
+                  scrollToSection(eachSection.href);
+                }}
               >
                 {eachSection.name}
               </a>

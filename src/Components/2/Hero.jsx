@@ -9,21 +9,22 @@ export default function Hero2() {
   return (
     <section
       className="md:h-[100vh] flex items-center overflow-x-hidden py-10"
+      id="hero"
       onMouseMove={(event) => {
         if (!imgRef.current || timeoutRef.current) return;
 
         timeoutRef.current = requestAnimationFrame(() => {
-          const deltaX = event.clientX - lastMousePos.current.x; 
-          const deltaY = event.clientY - lastMousePos.current.y; 
-      
-          lastMousePos.current = { x: event.clientX, y: event.clientY }; 
-      
-          const moveX = deltaX * 0.6; 
-          const moveY = deltaY * 0.6;
-      
+          const deltaX = event.clientX - lastMousePos.current.x;
+          const deltaY = event.clientY - lastMousePos.current.y;
+
+          lastMousePos.current = { x: event.clientX, y: event.clientY };
+
+          const moveX = Math.min(deltaX * 0.6, 92);
+          const moveY = Math.min(deltaY * 0.6, 20);
+
           imgRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
 
-          timeoutRef.current = null; 
+          timeoutRef.current = null;
         });
       }}
     >

@@ -117,13 +117,26 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        'slide-left': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+        "slide-left": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "slide-up": {
+          "0%": { transform: "translateY(0%)" },
+          "50%": { transform: "translateY(-90%)" }, // move up
+          "100%": { transform: "translateY(0%)" }, // move back down
+        },
+        "opacity-on-image-change": {
+          "0%": { opacity: 0 },
+          // "50%": { opacity: 0 }, // move up
+          "100%": { opacity: 1 }, // move back down
         },
       },
       animation: {
-        'slide-left': 'slide-left 40s linear infinite',
+        "slide-left": "slide-left 40s linear infinite",
+        "slide-up": "slide-up 30s linear infinite",
+        "opacity-on-image-change":
+          "opacity-on-image-change 1s ease-in-out",
       },
     },
   },

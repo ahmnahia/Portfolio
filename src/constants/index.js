@@ -9,6 +9,17 @@ import { FaCss3Alt } from "react-icons/fa6";
 import { TbBrandReactNative } from "react-icons/tb";
 import { DiNodejs } from "react-icons/di";
 
+// carousel images
+import upgradeTo5gDeskAr from "@/assets/workScreenshots/upgrade-to-5g-desk-ar.png";
+import upgradeTo5gDeskEn from "@/assets/workScreenshots/upgrade-to-5g-desk-en.png";
+import upgradeTo5gMobAr from "@/assets/workScreenshots/upgrade-to-5g-mob-ar.png";
+import upgradeTo5gMobEn from "@/assets/workScreenshots/upgrade-to-5g-mob-en.png";
+
+import appleBusiManagerDeskAr from "@/assets/workScreenshots/apple-busi-manager-desk-ar.png";
+import appleBusiManagerDeskEn from "@/assets/workScreenshots/apple-busi-manager-desk-en.png";
+import appleBusiManagerMobAr from "@/assets/workScreenshots/apple-busi-manager-mob-ar.png";
+import appleBusiManagerMobEn from "@/assets/workScreenshots/apple-busi-manager-mob-en.png";
+
 export const navbarSections = [
   { name: "About", href: "#about-me-section" },
   { name: "Projects", href: "#projects" },
@@ -30,4 +41,25 @@ export const technologiesUsed = [
   { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
   { icon: <FaLinux />, name: "Linux" },
   { icon: <SiGooglecloud />, name: "Google Cloud" },
+];
+
+export const projects = [
+  {
+    title: "Upgrade To 5G",
+    images: {
+      desk: { en: upgradeTo5gDeskEn, ar: upgradeTo5gDeskAr },
+      mob: { en: upgradeTo5gMobEn, ar: upgradeTo5gMobAr },
+    },
+    chips: ["Work", "Static Site"],
+    description: "Converted a figma design to a static website using HTML, CSS",
+  },
+  {
+    title: "Apple Business Manager",
+    images: {
+      desk: { en: appleBusiManagerDeskEn, ar: appleBusiManagerDeskAr },
+      mob: { en: appleBusiManagerMobEn, ar: appleBusiManagerMobAr },
+    },
+    chips: ["Work", "Static Site"],
+    description: "Converted a figma design to a static website using HTML, CSS",
+  },
 ];
