@@ -20,6 +20,21 @@ import appleBusiManagerDeskEn from "@/assets/workScreenshots/apple-busi-manager-
 import appleBusiManagerMobAr from "@/assets/workScreenshots/apple-busi-manager-mob-ar.png";
 import appleBusiManagerMobEn from "@/assets/workScreenshots/apple-busi-manager-mob-en.png";
 
+import giveMoreDeskAr from "@/assets/workScreenshots/give-more-desk-ar.png";
+import giveMoreDeskEn from "@/assets/workScreenshots/give-more-desk-en.png";
+import giveMoreMobAr from "@/assets/workScreenshots/give-more-mob-ar.png";
+import giveMoreMobEn from "@/assets/workScreenshots/give-more-mob-en.png";
+
+import sdnconnectDeskAr from "@/assets/workScreenshots/sdnconnect-desk-ar.png";
+import sdnconnectDeskEn from "@/assets/workScreenshots/sdnconnect-desk-en.png";
+import sdnconnectMobAr from "@/assets/workScreenshots/sdnconnect-mob-ar.png";
+import sdnconnectMobEn from "@/assets/workScreenshots/sdnconnect-mob-en.png";
+
+import smartWifiDeskAr from "@/assets/workScreenshots/smart-wifi-desk-ar.png";
+import smartWifiDeskEn from "@/assets/workScreenshots/smart-wifi-desk-en.png";
+import smartWifiMobAr from "@/assets/workScreenshots/smart-wifi-mob-ar.png";
+import smartWifiMobEn from "@/assets/workScreenshots/smart-wifi-mob-en.png";
+
 export const navbarSections = [
   { name: "About", href: "#about-me-section" },
   { name: "Projects", href: "#projects" },
@@ -45,13 +60,24 @@ export const technologiesUsed = [
 
 export const projects = [
   {
-    title: "Upgrade To 5G",
+    title: "Give More With Ooreedoo",
     images: {
-      desk: { en: upgradeTo5gDeskEn, ar: upgradeTo5gDeskAr },
-      mob: { en: upgradeTo5gMobEn, ar: upgradeTo5gMobAr },
+      desk: { en: giveMoreDeskEn, ar: giveMoreDeskAr },
+      mob: { en: giveMoreMobEn, ar: giveMoreMobAr },
     },
     chips: ["Work", "Static Site"],
-    description: "Converted a figma design to a static website using HTML, CSS",
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+  },
+  {
+    title: "Smart WIFI",
+    images: {
+      desk: { en: smartWifiDeskEn, ar: smartWifiDeskAr },
+      mob: { en: smartWifiMobEn, ar: smartWifiMobAr },
+    },
+    chips: ["Work", "Static Site"],
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
   {
     title: "Apple Business Manager",
@@ -60,6 +86,28 @@ export const projects = [
       mob: { en: appleBusiManagerMobEn, ar: appleBusiManagerMobAr },
     },
     chips: ["Work", "Static Site"],
-    description: "Converted a figma design to a static website using HTML, CSS",
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/business/ict-solutions/apple-business-manager/",
+  },
+  {
+    title: "SDN Connect",
+    images: {
+      desk: { en: sdnconnectDeskEn, ar: sdnconnectDeskAr },
+      mob: { en: sdnconnectMobEn, ar: sdnconnectMobAr },
+    },
+    chips: ["Work", "Static Site"],
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+  },
+  {
+    title: "Upgrade To 5G",
+    images: {
+      desk: { en: upgradeTo5gDeskEn, ar: upgradeTo5gDeskAr },
+      mob: { en: upgradeTo5gMobEn, ar: upgradeTo5gMobAr },
+    },
+    chips: ["Work", "Static Site"],
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
 ];

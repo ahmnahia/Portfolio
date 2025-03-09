@@ -117,6 +117,16 @@
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
   }
 
+  .work-modal-bg-svg {
+    background-color: #ffffff;
+    background-image: url("../assets/svgs/topography.svg");
+  }
+
+  .work-modal-bg-svg-dark {
+    /* background-color: #ffffff; */
+    background-image: url("../assets/svgs/topographyDark.svg");
+  }
+
   @media (max-width: 1000px) {
     .about-sec-title::after {
       transform: translate(-70px, -80px);

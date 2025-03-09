@@ -69,49 +69,6 @@ export default function Work() {
                 </div>
               </div>
             ))}
-            {/* card */}
-            <div
-              className="w-[31%] max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
-              onClick={() => {
-                toggleModal();
-              }}
-            >
-              {/* top */}
-              <div className="w-full h-[200px] flex justify-center translate-y-[-40px] relative">
-                <div className="overflow-hidden rounded-lg">
-                  <img
-                    src="/images/Screenshot 2025-02-26 214822.png"
-                    className="w-full h-full rounded-lg shadow-xl group-hover:scale-125 group-hover:blur-[1px] transition-all ease-in-out duration-500"
-                  />
-                </div>
-                <div className="absolute left-4 bottom-[-15px] flex gap-4">
-                  <div className="rounded-sm bg-blue-500 text-white dark:bg-orange-600  py-2 px-6 ">
-                    <p>Personal</p>
-                  </div>
-                  <div className="rounded-sm bg-blue-500 text-white dark:bg-orange-600  py-2 px-6 ">
-                    <p>Next.js</p>
-                  </div>
-                </div>
-              </div>
-              {/* mid */}
-              <div className=" mt-1">
-                <h3 className="text-2xl">MySnippetBoard</h3>
-                <p className="mt-3 text-zinc-500 font-normal">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-                  reprehenderit quos omnis molestias aut consequatur quaerat,
-                  praesentium magni porro nihil?
-                </p>
-              </div>
-              {/* footer */}
-              <div className="flex justify-end mt-5">
-                <button className="text-blue-500 dark:text-orange-600 flex items-center gap-1">
-                  More Details
-                  <span className="text-2xl group-hover:text-3xl transition-all duration-500">
-                    <MdOutlineOpenInNew />
-                  </span>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
         <WorkModal
