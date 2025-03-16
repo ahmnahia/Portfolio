@@ -65,7 +65,7 @@ export const projects = [
       desk: { en: giveMoreDeskEn, ar: giveMoreDeskAr },
       mob: { en: giveMoreMobEn, ar: giveMoreMobAr },
     },
-    chips: ["Work", "Static Site"],
+    chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
@@ -75,7 +75,7 @@ export const projects = [
       desk: { en: smartWifiDeskEn, ar: smartWifiDeskAr },
       mob: { en: smartWifiMobEn, ar: smartWifiMobAr },
     },
-    chips: ["Work", "Static Site"],
+    chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
@@ -85,7 +85,7 @@ export const projects = [
       desk: { en: appleBusiManagerDeskEn, ar: appleBusiManagerDeskAr },
       mob: { en: appleBusiManagerMobEn, ar: appleBusiManagerMobAr },
     },
-    chips: ["Work", "Static Site"],
+    chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     link: "https://www.ooredoo.qa/web/en/business/ict-solutions/apple-business-manager/",
@@ -96,7 +96,7 @@ export const projects = [
       desk: { en: sdnconnectDeskEn, ar: sdnconnectDeskAr },
       mob: { en: sdnconnectMobEn, ar: sdnconnectMobAr },
     },
-    chips: ["Work", "Static Site"],
+    chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
@@ -106,7 +106,7 @@ export const projects = [
       desk: { en: upgradeTo5gDeskEn, ar: upgradeTo5gDeskAr },
       mob: { en: upgradeTo5gMobEn, ar: upgradeTo5gMobAr },
     },
-    chips: ["Work", "Static Site"],
+    chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },

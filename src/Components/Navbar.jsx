@@ -16,7 +16,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10 nav-bar-sec">
+    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10 nav-bar-sec z-50">
       <div className="h-full container mx-auto flex justify-between items-center text-black">
         <div
           className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600"

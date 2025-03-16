@@ -111,6 +111,9 @@ module.exports = {
           5: "hsl(var(--chart-5))",
         },
       },
+      transitionDuration: {
+        5000: "5000ms",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -127,16 +130,14 @@ module.exports = {
           "100%": { transform: "translateY(0%)" }, // move back down
         },
         "opacity-on-image-change": {
-          "0%": { opacity: 0 },
-          // "50%": { opacity: 0 }, // move up
-          "100%": { opacity: 1 }, // move back down
+          "0%": { opacity: 0, transform: "scale(0.95)" },
+          "100%": { opacity: 1, transform: "scale(1)" }, // move back down
         },
       },
       animation: {
         "slide-left": "slide-left 40s linear infinite",
         "slide-up": "slide-up 30s linear infinite",
-        "opacity-on-image-change":
-          "opacity-on-image-change 1s ease-in-out",
+        "opacity-on-image-change": "opacity-on-image-change 1s ease-in-out",
       },
     },
   },

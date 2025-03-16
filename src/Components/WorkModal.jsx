@@ -167,7 +167,6 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               >
                 <Image
                   id="image"
-                  onClick={() => {}}
                   src={
                     selectedProject.images[device][languageRadio.toLowerCase()]
                   }
@@ -217,10 +216,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                 <span className=" p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
                   <FaExternalLinkAlt />
                 </span>
-                <span className="text-xl max-sm:text-lg">
-
-                Link
-                </span>
+                <span className="text-xl max-sm:text-lg">Link</span>
               </a>
             </div>
           </div>
