@@ -36,7 +36,7 @@ import smartWifiMobAr from "@/assets/workScreenshots/smart-wifi-mob-ar.png";
 import smartWifiMobEn from "@/assets/workScreenshots/smart-wifi-mob-en.png";
 
 export const navbarSections = [
-  { name: "About", href: "#about-me-section" },
+  { name: "About", href: "#about-me" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];

@@ -82,7 +82,7 @@
 
   .blob-shape {
     /* border-radius: 55% 45% 26% 74% / 47% 38% 62% 53%; */
-    animation: blobAnimation 18s infinite ease-in-out;
+    animation: blobAnimation 12s infinite ease-in-out;
   }
 
   .for-svg-div {
@@ -107,7 +107,7 @@
     -webkit-text-stroke: 2px #404040;
     opacity: 0.3;
     position: absolute;
-    transform: translate(-10px, -150px);
+    transform: translate(-10px, -130px);
     font-family: monospace;
   }
 

@@ -5,9 +5,10 @@ import clsx from "clsx";
 export default function ContactMessageStatusToast({ messageStatus }) {
   return (
     <div
+    id="etstsetse"
       className={clsx(
-        "fixed left-8 bottom-8 overflow-hidden translate-x-[-150%] transition-all duration-500",
-        messageStatus.messageSent ? "z-50 translate-x-0" : "-z-50"
+        "fixed left-8 bottom-8 overflow-hidden  transition-all duration-500",
+        messageStatus.messageSent ? "z-50 translate-x-0" : "-z-50 translate-x-[-150%]"
       )}
     >
       <div

@@ -107,7 +107,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
         <div>
           <div className="w-full flex justify-end ">
             <button
-              className="text-8xl max-sm:text-3xl hover:shadow-sm shadow-orange-600"
+              className="text-6xl max-sm:text-3xl hover:shadow-sm shadow-orange-600"
               onClick={() => {
                 toggleModal();
               }}
@@ -115,7 +115,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               <IoCloseSharp />
             </button>
           </div>
-          <div className="relative text-black dark:text-white max-sm:py-0 w-full mt-4 max-sm:mt-0  ">
+          <div className="relative text-black dark:text-white max-sm:py-0 w-full  max-sm:mt-0  ">
             <div className="container flex flex-col" style={{}}>
               <div className="flex flex-wrap justify-center mb-6">
                 <button
@@ -161,7 +161,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               </div>
               <div
                 className={clsx(
-                  "h-[600px] max-lg:h-[500px] max-sm:h-[300px] relative overflow-hidden flex justify-center rounded-md shadow-2xl dark:shadow-none",
+                  "h-[500px] max-lg:h-[500px] max-sm:h-[300px] relative overflow-hidden flex justify-center rounded-md shadow-2xl dark:shadow-none",
                   device == "mob" && "shadow-none"
                 )}
               >
@@ -172,7 +172,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                   }
                   alt="screenshot"
                   className={clsx(
-                    "absolute cursor-zoom-in w-full rounded-md",
+                    "absolute cursor-zoom-in rounded-md w-full",
                     // open ? "animate-slide-up delay-500 " : "translate-y-0",
                     isFading
                       ? "animate-opacity-on-image-change translate-y-0"
@@ -187,7 +187,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                 <h3 className="text-4xl max-lg:text-2xl ">
                   {selectedProject.title}
                 </h3>
-                <p className="font-normal text-2xl max-lg:text-lg  mt-4 max-sm:mt-2 max-w-[900px] text-zinc-600 dark:text-zinc-400 ">
+                <p className="font-normal text-2xl max-lg:text-lg  mt-4 mb-8 max-sm:mt-2 max-w-[900px] text-zinc-600 dark:text-zinc-400 ">
                   {selectedProject.description}
                 </p>
               </div>
@@ -207,7 +207,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               </span>
               <span className="text-xl max-sm:text-lg ">View Full Page</span>
             </div>
-            <div className=" text-2xl max-sm:text-lg group cursor-pointer">
+            <div className=" text-2xl max-sm:text-lg group cursor-pointer my-4">
               <a
                 href={selectedProject.link}
                 className="text-xl max-sm:text-lg flex items-center gap-1"

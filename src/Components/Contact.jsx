@@ -5,15 +5,19 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { IoIosSend } from "react-icons/io";
 import { sendMessage } from "@/serverActions/contactForm";
 import ContactMessageStatusToast from "./ContactMessageStatusToast";
+import { Loader2 } from "lucide-react";
 
 export default function Contact() {
   const [messageStatus, setMessageStatus] = useState({
     messageSent: false,
     error: false,
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const formAction = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // show loading spinner for the user
+
     const formData = new FormData(e.target);
     const formValues = {};
     for (const [key, value] of formData.entries()) {
@@ -22,6 +26,7 @@ export default function Contact() {
     const res = await sendMessage(formValues);
     setMessageStatus(res); // to show a toast message
     e.target.reset(); //reset form values
+    setIsLoading(false); // loading done
     setTimeout(() => {
       setMessageStatus({
         messageSent: false,
@@ -91,7 +96,7 @@ export default function Contact() {
             <div className="mt-10 h-[20vh]">
               <textarea
                 className="h-full w-full bg-zinc-200 dark:bg-zinc-800 dark:text-white text-black p-3 font-normal rounded-md resize-none"
-                placeholder="Reach me out about anything!"
+                placeholder="Reach out to me about anything!"
                 required
                 minLength={2}
                 maxLength={800}
@@ -104,7 +109,7 @@ export default function Contact() {
                 type="submit"
                 name="submit"
                 // onClick={() => {
-                //   setMessageStatus({messageSent: true, error: false});
+                //   setMessageStatus({messageSent: true, error: true});
                 //   setTimeout(() => {
                 //     setMessageStatus({
                 //       messageSent: false,
@@ -112,11 +117,16 @@ export default function Contact() {
                 //     });
                 //   }, 6000);
                 // }}
+                disabled={isLoading}
                 className="text-lg flex items-center font-normal bg-white shadow-lg dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative"
               >
                 <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
                 <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-sm:rounded-sm z-10">
-                  <IoIosSend />
+                  {isLoading ? (
+                    <Loader2 className="animate-spin" />
+                  ) : (
+                    <IoIosSend />
+                  )}
                 </span>
                 <span className="px-5 group-hover:text-white z-10 font-bold max-sm:hidden">
                   Send Message

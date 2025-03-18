@@ -18,10 +18,14 @@ export default function Work() {
       <section className="py-32 max-lg:py-[150px] relative" id="projects">
         <div className="side-page-svg absolute right-0 top-[0px] max-md:top-[-20px] w-[200px] h-[200px] max-sm:w-[150px] max-sm:h-[150px] rotate-[270deg] z-[-10]"></div>
         <div className="container">
-          <h1 className="max-lg:text-4xl lg:text-6xl text-center  pt-5 text-blue-500 dark:text-orange-600 cus-color-transition about-sec-title after:content-['02'] after:translate-x-[-450px] after:translate-y-[-130px] max-lg:after:translate-x-[-240px] max-lg:after:translate-y-[-90px]">
+          <h1 className="max-lg:text-4xl lg:text-6xl text-center  pt-5 text-blue-500 dark:text-orange-600 about-sec-title after:content-['02'] after:translate-x-[-450px] after:translate-y-[-130px] max-lg:after:translate-x-[-240px] max-lg:after:translate-y-[-90px]">
             Projects
           </h1>
-          <div className="flex gap-x-5 gap-y-14 flex-wrap mt-24 justify-center z-10">
+          <h6 className="text-blue-400 dark:text-orange-400 text-xl my-6 max-sm:text-center">
+            Some of My Work...
+          </h6>
+          <div className="flex gap-x-5 gap-y-14 flex-wrap mt-12 justify-center z-10">
+
             {projects.map((ep, idx) => (
               <div
                 key={idx}
@@ -33,11 +37,11 @@ export default function Work() {
               >
                 {/* top */}
                 <div className="w-full h-[200px] flex justify-center translate-y-[-40px] relative">
-                  <div className="overflow-hidden rounded-lg">
+                  <div className="overflow-hidden rounded-lg shadow-md dark:shadow-none">
                     <Image
                       src={ep.images.desk.en}
                       alt={ep.title}
-                      className="w-full rounded-lg shadow-xl group-hover:scale-110 group-hover:blur-[1px] transition-all ease-in-out duration-500"
+                      className="w-full rounded-lg group-hover:scale-110 group-hover:blur-[1px] transition-all ease-in-out duration-500"
                     />
                   </div>
                   <div className="absolute left-4 bottom-[-15px] flex gap-4">

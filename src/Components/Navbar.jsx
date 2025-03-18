@@ -3,20 +3,21 @@ import { useState } from "react";
 import { navbarSections } from "@/constants";
 import { MdMenu, MdClose } from "react-icons/md";
 import ThemeToggle from "./ThemeToggle";
+import { scrollToSection } from "@/helper";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const scrollToSection = (id) => {
-    const section = document.querySelector(id);
-    window.scrollTo({
-      top: section.offsetTop - 100,
-      behavior: "smooth",
-    });
-  };
+  // const scrollToSection = (id) => {
+  //   const section = document.querySelector(id);
+  //   window.scrollTo({
+  //     top: section.offsetTop - 100,
+  //     behavior: "smooth",
+  //   });
+  // };
 
   return (
-    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed z-10 nav-bar-sec z-50">
+    <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed nav-bar-sec z-50">
       <div className="h-full container mx-auto flex justify-between items-center text-black">
         <div
           className="max-md:text-xl md:text-2xl hover:scale-105 hover:cursor-pointer left-to-right-b-onhover before:bg-blue-500 dark:before:bg-orange-600"
