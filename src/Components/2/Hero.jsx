@@ -53,7 +53,7 @@ export default function Hero2() {
             for ways to learn and improve.
           </p>
           <div
-            className="mt-8 text-xl flex gap-3 items-center text-blue-black dark:text-orange-100   cursor-pointer  bottom-0 max-lg:justify-center"
+            className="mt-8 text-xl flex gap-3 items-center text-blue-black dark:text-white   cursor-pointer  bottom-0 max-lg:justify-center"
             onClick={() => {
               scrollToSection("#about-me");
             }}
@@ -74,7 +74,8 @@ export default function Hero2() {
             height={400}
             alt="Me"
             onLoadingComplete={(image) => {
-              image.classList.add("blur-none");
+              // image.classList.add("blur-none");
+              image.classList.remove("blur-md");
             }}
           />
           <div className="for-svg-div bottom-[-40px] right-[240px] max-md:right-[160px] max-sm:hidden"></div>

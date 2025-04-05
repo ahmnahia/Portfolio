@@ -25,11 +25,10 @@ export default function Work() {
             Some of My Work...
           </h6>
           <div className="flex gap-x-5 gap-y-14 flex-wrap mt-12 justify-center z-10">
-
             {projects.map((ep, idx) => (
               <div
                 key={idx}
-                className="w-[31%] max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
+                className="w-[31%] flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
                 onClick={() => {
                   toggleModal();
                   setSelectedProject(projects[idx]);
@@ -39,7 +38,11 @@ export default function Work() {
                 <div className="w-full h-[200px] flex justify-center translate-y-[-40px] relative">
                   <div className="overflow-hidden rounded-lg shadow-md dark:shadow-none">
                     <Image
-                      src={ep.images.desk.en}
+                      src={
+                        ep.chips.includes("Work")
+                          ? ep.images[0].image
+                          : ep.images[0]
+                      }
                       alt={ep.title}
                       className="w-full rounded-lg group-hover:scale-110 group-hover:blur-[1px] transition-all ease-in-out duration-500"
                     />
@@ -56,7 +59,7 @@ export default function Work() {
                   </div>
                 </div>
                 {/* mid */}
-                <div className=" mt-1">
+                <div className="mt-1 flex-1">
                   <h3 className="text-2xl">{ep.title}</h3>
                   <p className="mt-3 text-zinc-500 font-normal">
                     {ep.description}
@@ -75,11 +78,13 @@ export default function Work() {
             ))}
           </div>
         </div>
-        <WorkModal
-          open={isModalOpen}
-          toggleModal={toggleModal}
-          selectedProject={selectedProject}
-        />
+        {isModalOpen && (
+          <WorkModal
+            open={isModalOpen}
+            toggleModal={toggleModal}
+            selectedProject={selectedProject}
+          />
+        )}
       </section>
     </>
   );

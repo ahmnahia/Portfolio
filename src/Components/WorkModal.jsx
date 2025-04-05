@@ -1,102 +1,29 @@
 "use client";
-import { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-import { projects } from "@/constants";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
-// import sdnConnectDeskEn from "@/assets/carouselImages/sdnconnect-desk-en.png";
 import clsx from "clsx";
 import "viewerjs/dist/viewer.css";
-import Viewer from "viewerjs";
 import { FaDesktop, FaMobileScreenButton, FaExpand } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import useWorkModalHook from "@/hooks/useWorkModalHook";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "@/styles/WorkModal.css";
 
 export default function WorkModal({ open, toggleModal, selectedProject }) {
-  const [languageRadio, setLanguageRadio] = useState("EN");
-  const [device, setDevice] = useState("desk");
-  const [isFading, setIsFading] = useState(false);
+  const {
+    state: { workState, personalState },
+    changeLanguageOrDevice,
+  } = useWorkModalHook(open, selectedProject);
 
-  const [api, setApi] = useState();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
-  useEffect(() => {}, []);
-
-  // disable scroll when modal is open
-  useEffect(() => {
-    if (open) {
-      document.documentElement.style.overflow = "hidden"; // remove scroll
-      document.body.style.overflow = "hidden"; // for older browsers (optional)
-      const viewer = new Viewer(document.getElementById("image"), {
-        inline: false,
-        viewed() {
-          // viewer.zoomTo(1);
-        },
-        keyboard: 0,
-        rotatable: 0,
-        title: 0,
-        scalable: 0,
-      });
-    } else {
-      document.documentElement.style.overflow = "auto";
-      document.body.style.overflow = "auto";
-    }
-
-    return () => {
-      document.documentElement.style.overflow = "auto";
-      document.body.style.overflow = "auto";
-    };
-  }, [open]);
-
-  // for opacity animation
-  useEffect(() => {
-    if (open) {
-      setIsFading(true); // Start the fade animation
-
-      // Resume slide-up animation after fade animation completes (e.g., 3s)
-      setTimeout(() => {
-        setIsFading(false);
-      }, 1000);
-    }
-  }, [open, languageRadio, device]);
-
-  useEffect(() => {
-    if (!api || !open) {
-      setCount(0);
-      setCurrent(0);
-      setDevice("desk");
-      setLanguageRadio("EN");
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api, open]);
-
-  if (!open && !selectedProject) {
+  if (!open || !selectedProject) {
     return;
   }
 
   return (
     <div
-      className="fixed inset-0 bg-white dark:bg-zinc-900 bg-opacity-60 z-50 work-modal-bg-svg dark:work-modal-bg-svg-dark overflow-y-auto"
+      className="work-modal fixed inset-0 bg-white dark:bg-zinc-900 z-50 work-modal-bg-svg dark:work-modal-bg-svg-dark overflow-y-auto"
       style={{ display: open ? "block" : "none" }}
     >
       <div
@@ -117,72 +44,123 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
           </div>
           <div className="relative text-black dark:text-white max-sm:py-0 w-full  max-sm:mt-0  ">
             <div className="container flex flex-col" style={{}}>
-              <div className="flex flex-wrap justify-center mb-6">
-                <button
-                  onClick={() => {
-                    setLanguageRadio("EN");
-                  }}
-                  className={clsx(
-                    "p-2 rounded-lg",
-                    languageRadio == "EN"
-                      ? "bg-blue-500 dark:bg-orange-600 text-white"
-                      : ""
-                  )}
-                >
-                  <span>EN</span>
-                </button>
-                <button
-                  onClick={() => {
-                    setLanguageRadio("AR");
-                  }}
-                  className={clsx(
-                    "p-2 rounded-lg",
-                    languageRadio == "AR"
-                      ? "bg-blue-500 dark:bg-orange-600 text-white"
-                      : ""
-                  )}
-                >
-                  <span>AR</span>
-                </button>
-                <button
-                  onClick={() => {
-                    setDevice(device == "desk" ? "mob" : "desk");
-                  }}
-                  className={clsx("p-2 rounded-lg text-xl")}
-                >
-                  <span>
-                    {device == "desk" ? (
-                      <FaDesktop />
-                    ) : (
-                      <FaMobileScreenButton />
+              {workState ? (
+                <div className="flex flex-wrap justify-center mb-6">
+                  <button
+                    onClick={() => {
+                      changeLanguageOrDevice("EN");
+                    }}
+                    className={clsx(
+                      "p-2 rounded-lg",
+                      workState.languageRadio == "EN"
+                        ? "bg-blue-500 dark:bg-orange-600 text-white"
+                        : ""
                     )}
-                  </span>
-                </button>
-              </div>
-              <div
-                className={clsx(
-                  "h-[500px] max-lg:h-[500px] max-sm:h-[300px] relative overflow-hidden flex justify-center rounded-md shadow-2xl dark:shadow-none",
-                  device == "mob" && "shadow-none"
-                )}
-              >
-                <Image
-                  id="image"
-                  src={
-                    selectedProject.images[device][languageRadio.toLowerCase()]
-                  }
-                  alt="screenshot"
+                  >
+                    <span>EN</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      changeLanguageOrDevice("AR");
+                    }}
+                    className={clsx(
+                      "p-2 rounded-lg",
+                      workState.languageRadio == "AR"
+                        ? "bg-blue-500 dark:bg-orange-600 text-white"
+                        : ""
+                    )}
+                  >
+                    <span>AR</span>
+                  </button>
+                  <button
+                    onClick={() => {
+                      changeLanguageOrDevice(
+                        undefined,
+                        workState.device == "desk" ? "mob" : "desk"
+                      );
+                    }}
+                    className={clsx("p-2 rounded-lg text-xl")}
+                  >
+                    <span>
+                      {workState.device == "desk" ? (
+                        <FaDesktop />
+                      ) : (
+                        <FaMobileScreenButton />
+                      )}
+                    </span>
+                  </button>
+                </div>
+              ) : (
+                <></>
+              )}
+              {workState ? (
+                <div
                   className={clsx(
-                    "absolute cursor-zoom-in rounded-md w-full",
-                    // open ? "animate-slide-up delay-500 " : "translate-y-0",
-                    isFading
-                      ? "animate-opacity-on-image-change translate-y-0"
-                      : "animate-slide-up delay-500",
-                    device == "mob"
-                      ? "max-w-[382px] shadow-2xl dark:shadow-none"
-                      : ""
+                    "h-[500px] max-lg:h-[500px] max-sm:h-[300px] relative overflow-hidden  rounded-md shadow-2xl dark:shadow-none",
+                    workState.device == "mob" && "shadow-none"
                   )}
-                />
-              </div>
+                >
+                  <ul id="images">
+                    {workState.images.map((eachImage, idx) => (
+                      <li key={idx} className="w-full flex justify-center z-10">
+                        <Image
+                          id="image"
+                          src={eachImage.image}
+                          alt="screenshot"
+                          className={clsx(
+                            "absolute cursor-zoom-in rounded-md w-full",
+                            workState.device == eachImage.device &&
+                              workState.languageRadio == eachImage.lang
+                              ? "block"
+                              : "hidden",
+                            workState.device == "mob"
+                              ? "max-w-[382px] shadow-2xl dark:shadow-none"
+                              : "",
+                            workState.isFading
+                              ? "animate-opacity-on-image-change translate-y-0"
+                              : "animate-slide-up delay-500"
+                          )}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : personalState && personalState.sliderSettings.beforeChange ? (
+                <div className="personal-slider-div">
+                  <Slider {...personalState.sliderSettings} className="">
+                    {personalState.images.map((ei, idx) => (
+                      <div
+                        key={idx}
+                        className={clsx(
+                          "personal-img-div",
+                          personalState.currentSlideIdx + 1 == idx ||
+                            (personalState.currentSlideIdx ==
+                              personalState.images.length - 1 &&
+                              idx == 0)
+                            ? "translate-x-[-180px]"
+                            : "translate-x-0",
+                          personalState.currentSlideIdx - 1 == idx ||
+                            (personalState.currentSlideIdx == 0 &&
+                              idx == personalState.images.length - 1)
+                            ? "translate-x-[180px]"
+                            : "translate-x-0",
+                          Math.abs(personalState.currentSlideIdx - idx) >= 2
+                            ? "opacity-0"
+                            : "opacity-100"
+                        )}
+                      >
+                        <Image
+                          className="w-full h-full"
+                          src={ei}
+                          alt="Project Screenshot"
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              ) : (
+                <></>
+              )}
               <div className="mt-8  text-center flex flex-col items-center">
                 <h3 className="text-4xl max-lg:text-2xl ">
                   {selectedProject.title}

@@ -35,6 +35,13 @@ import smartWifiDeskEn from "@/assets/workScreenshots/smart-wifi-desk-en.png";
 import smartWifiMobAr from "@/assets/workScreenshots/smart-wifi-mob-ar.png";
 import smartWifiMobEn from "@/assets/workScreenshots/smart-wifi-mob-en.png";
 
+// portfolio imports
+import portfolioHero from "@/assets/personalScreenshots/portfolio/hero.png";
+import portfolioProjects from "@/assets/personalScreenshots/portfolio/projects.png";
+import portfolioAbout from "@/assets/personalScreenshots/portfolio/about.png";
+import portfolioContact from "@/assets/personalScreenshots/portfolio/contact.png";
+import portfolioMessageSent from "@/assets/personalScreenshots/portfolio/messagesent.png";
+
 export const navbarSections = [
   { name: "About", href: "#about-me" },
   { name: "Projects", href: "#projects" },
@@ -60,31 +67,50 @@ export const technologiesUsed = [
 
 export const projects = [
   {
+    title: "Portfolio",
+    images: [
+      portfolioHero,
+      portfolioAbout,
+      portfolioProjects,
+      portfolioContact,
+      portfolioMessageSent
+    ],
+    chips: ["Personal", "Next.js"],
+    description:
+      "My personal portfolio website, built using Next.js to showcase my work and skills in web development.",
+  },
+  {
     title: "Give More With Ooreedoo",
-    images: {
-      desk: { en: giveMoreDeskEn, ar: giveMoreDeskAr },
-      mob: { en: giveMoreMobEn, ar: giveMoreMobAr },
-    },
+    images: [
+      { image: giveMoreDeskEn, device: "desk", lang: "EN" },
+      { image: giveMoreDeskAr, device: "desk", lang: "AR" },
+      { image: giveMoreMobEn, device: "mob", lang: "EN" },
+      { image: giveMoreMobAr, device: "mob", lang: "AR" },
+    ],
     chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
   {
     title: "Smart WIFI",
-    images: {
-      desk: { en: smartWifiDeskEn, ar: smartWifiDeskAr },
-      mob: { en: smartWifiMobEn, ar: smartWifiMobAr },
-    },
+    images: [
+      { image: smartWifiDeskEn, device: "desk", lang: "EN" },
+      { image: smartWifiDeskAr, device: "desk", lang: "AR" },
+      { image: smartWifiMobEn, device: "mob", lang: "EN" },
+      { image: smartWifiMobAr, device: "mob", lang: "AR" },
+    ],
     chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
   {
     title: "Apple Business Manager",
-    images: {
-      desk: { en: appleBusiManagerDeskEn, ar: appleBusiManagerDeskAr },
-      mob: { en: appleBusiManagerMobEn, ar: appleBusiManagerMobAr },
-    },
+    images: [
+      { image: appleBusiManagerDeskEn, device: "desk", lang: "EN" },
+      { image: appleBusiManagerDeskAr, device: "desk", lang: "AR" },
+      { image: appleBusiManagerMobEn, device: "mob", lang: "EN" },
+      { image: appleBusiManagerMobAr, device: "mob", lang: "AR" },
+    ],
     chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
@@ -92,20 +118,24 @@ export const projects = [
   },
   {
     title: "SDN Connect",
-    images: {
-      desk: { en: sdnconnectDeskEn, ar: sdnconnectDeskAr },
-      mob: { en: sdnconnectMobEn, ar: sdnconnectMobAr },
-    },
+    images: [
+      { image: sdnconnectDeskEn, device: "desk", lang: "EN" },
+      { image: sdnconnectDeskAr, device: "desk", lang: "AR" },
+      { image: sdnconnectMobEn, device: "mob", lang: "EN" },
+      { image: sdnconnectMobAr, device: "mob", lang: "AR" },
+    ],
     chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
   },
   {
     title: "Upgrade To 5G",
-    images: {
-      desk: { en: upgradeTo5gDeskEn, ar: upgradeTo5gDeskAr },
-      mob: { en: upgradeTo5gMobEn, ar: upgradeTo5gMobAr },
-    },
+    images: [
+      { image: upgradeTo5gDeskEn, device: "desk", lang: "EN" },
+      { image: upgradeTo5gDeskAr, device: "desk", lang: "AR" },
+      { image: upgradeTo5gMobEn, device: "mob", lang: "EN" },
+      { image: upgradeTo5gMobAr, device: "mob", lang: "AR" },
+    ],
     chips: ["Work", "Static"],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
