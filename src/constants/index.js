@@ -130,7 +130,7 @@ export const projects = [
       { icon: <FaWordpress />, name: "WordPress" },
     ],
     description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+      "Transformed Figma designs into a responsive website using HTML, CSS, JavaScript, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     link: "https://www.ooredoo.qa/web/en/business/smart-wi-fi/",
   },
   {

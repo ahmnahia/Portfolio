@@ -54,7 +54,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
             </button>
           </div>
           <div className="relative text-black dark:text-white max-sm:py-0 w-full  max-sm:mt-0  ">
-            <div className="container flex flex-col" style={{}}>
+            <div className="container max-w-[1200px] flex flex-col" style={{}}>
               {workState ? (
                 <div className="flex flex-wrap justify-center mb-6">
                   <button
@@ -107,7 +107,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               {workState ? (
                 <div
                   className={clsx(
-                    "h-[500px] max-lg:h-[500px] max-sm:h-[300px] relative overflow-hidden  rounded-md shadow-2xl dark:shadow-none",
+                    "h-[450px] max-lg:h-[450px] max-sm:h-[300px] relative overflow-hidden  rounded-md shadow-2xl dark:shadow-none",
                     workState.device == "mob" && "shadow-none"
                   )}
                 >
@@ -139,7 +139,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               ) : personalState ? (
                 <div className="personal-slider-div">
                   {personalState.sliderSettings.beforeChange && (
-                    <Slider {...personalState.sliderSettings} className="">
+                    <Slider {...personalState.sliderSettings} className="animate-opacity-on-image-change translate-y-0">
                       {personalState.images.map((ei, idx) => (
                         <div
                           key={idx}

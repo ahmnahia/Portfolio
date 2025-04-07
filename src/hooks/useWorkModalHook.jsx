@@ -184,8 +184,6 @@ export default function useWorkModalHook(open, selectedProject) {
 
       const imagesEle = document.getElementById("images");
       if (imagesEle) {
-        console.log("entered?!?!?");
-
         const gallery = new Viewer(imagesEle, {
           inline: false,
           viewed() {

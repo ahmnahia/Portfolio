@@ -23,7 +23,7 @@ export default function ThemeToggle() {
         }}
       >
         <BsFillMoonStarsFill className=""/>
-      </div>{" "}
+      </div>
       <div
         className={`text-2xl cursor-pointer text-orange-300 ${
           theme == "dark" ? "block" : "hidden"
