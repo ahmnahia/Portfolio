@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { scrollToSection } from "@/helper";
 import Image from "next/image";
@@ -68,15 +68,11 @@ export default function Hero() {
           <Image
             ref={imgRef}
             id="pfp-img"
-            src="/images/me2.jpg"
-            className="pfp-pic-div w-full max-w-[400px] max-sm:w-[100%] h-[400px] max-md:h-[300px] bg-cover blob-shape bg-center relative transition-all blur-md"
+            src="/images/me2.JPG"
+            className="pfp-pic-div w-full max-w-[400px] max-sm:w-[100%] h-[400px] max-md:h-[300px] bg-cover blob-shape bg-center relative transition-all"
             width={400}
             height={400}
             alt="Me"
-            onLoadingComplete={(image) => {
-              // image.classList.add("blur-none");
-              image.classList.remove("blur-md");
-            }}
           />
           <div className="for-svg-div bottom-[-40px] right-[240px] max-md:right-[160px] max-sm:hidden"></div>
           <div className="for-svg-div top-[-40px] right-[-40px] max-sm:hidden"></div>
