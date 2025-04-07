@@ -39,7 +39,7 @@ export default function Contact() {
     <section className="py-32 max-lg:py-[150px] relative" id="contact">
       <div className="side-page-svg absolute left-0 top-[0px] max-md:top-[-20px] w-[200px] h-[200px] max-sm:w-[150px] max-sm:h-[150px] rotate-[90deg] z-[-10]"></div>
       <div className="container">
-        <h1 className="max-lg:text-4xl lg:text-6xl text-center  pt-5 text-blue-500 dark:text-orange-600 cus-color-transition about-sec-title after:content-['03'] after:translate-x-[-10px] after:translate-y-[-150px] max-lg:after:translate-x-[-70px] max-lg:after:translate-y-[-80px]">
+        <h1 className="max-lg:text-4xl lg:text-6xl text-center  pt-5 text-blue-500 dark:text-orange-600 about-sec-title after:content-['03'] after:translate-x-[-10px] after:translate-y-[-150px] max-lg:after:translate-x-[-70px] max-lg:after:translate-y-[-80px]">
           Contact
         </h1>
         <div className="mt-24 p-12 py-20 max-md:px-6 border-zinc-400/20 border-2 rounded-xl shadow-md relative">

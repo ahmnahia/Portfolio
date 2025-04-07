@@ -69,7 +69,7 @@ export default function Work() {
                 <div className="flex justify-end mt-5">
                   <button className="text-blue-500 dark:text-orange-600 flex items-center gap-1">
                     More Details
-                    <span className="text-2xl group-hover:text-3xl transition-all duration-500">
+                    <span className="text-2xl group-hover:text-3xl transition-[font-size]  duration-500">
                       <MdOutlineOpenInNew />
                     </span>
                   </button>

@@ -1,5 +1,11 @@
-import { SiMongodb, SiPostman, SiExpress, SiGooglecloud } from "react-icons/si";
-import { FaReact, FaHtml5, FaBootstrap, FaLinux } from "react-icons/fa";
+import { SiMongodb, SiPostman, SiExpress } from "react-icons/si";
+import {
+  FaReact,
+  FaHtml5,
+  FaBootstrap,
+  FaLinux,
+  FaWordpress,
+} from "react-icons/fa";
 import {
   RiNextjsFill,
   RiJavascriptFill,
@@ -41,6 +47,8 @@ import portfolioProjects from "@/assets/personalScreenshots/portfolio/projects.p
 import portfolioAbout from "@/assets/personalScreenshots/portfolio/about.png";
 import portfolioContact from "@/assets/personalScreenshots/portfolio/contact.png";
 import portfolioMessageSent from "@/assets/personalScreenshots/portfolio/messagesent.png";
+import portfolioFullScreenDesk from "@/assets/personalScreenshots/portfolio/fullscreen-desk.png";
+import portfolioFullScreenMob from "@/assets/personalScreenshots/portfolio/fullscreen-mob.png";
 
 export const navbarSections = [
   { name: "About", href: "#about-me" },
@@ -52,17 +60,17 @@ export const technologiesUsed = [
   { icon: <FaHtml5 />, name: "HTML" },
   { icon: <FaCss3Alt />, name: "CSS" },
   { icon: <RiJavascriptFill />, name: "JavaScript" },
-  { icon: <FaReact />, name: "React" },
-  { icon: <TbBrandReactNative />, name: "React Native" },
-  { icon: <DiNodejs />, name: "Node js" },
-  { icon: <SiExpress />, name: "Express js" },
-  { icon: <SiMongodb />, name: "MongoDB" },
-  { icon: <RiNextjsFill />, name: "Next js" },
-  { icon: <SiPostman />, name: "Postman" },
   { icon: <FaBootstrap />, name: "Bootstrap" },
   { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+  { icon: <FaWordpress />, name: "WordPress" },
+  { icon: <DiNodejs />, name: "Node.js" },
+  { icon: <FaReact />, name: "React" },
+  { icon: <TbBrandReactNative />, name: "React Native" },
+  { icon: <SiExpress />, name: "Express.js" },
+  { icon: <SiMongodb />, name: "MongoDB" },
+  { icon: <RiNextjsFill />, name: "Next.js" },
+  { icon: <SiPostman />, name: "Postman" },
   { icon: <FaLinux />, name: "Linux" },
-  { icon: <SiGooglecloud />, name: "Google Cloud" },
 ];
 
 export const projects = [
@@ -73,11 +81,18 @@ export const projects = [
       portfolioAbout,
       portfolioProjects,
       portfolioContact,
-      portfolioMessageSent
+      portfolioMessageSent,
     ],
+    fullScreenImages: [portfolioFullScreenDesk, portfolioFullScreenMob],
     chips: ["Personal", "Next.js"],
     description:
       "My personal portfolio website, built using Next.js to showcase my work and skills in web development.",
+    stack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+      { icon: <RiNextjsFill />, name: "Next.js" },
+    ],
+    githubLink: "https://github.com/ahmnahia/Portfolio",
   },
   {
     title: "Give More With Ooreedoo",
@@ -88,8 +103,15 @@ export const projects = [
       { image: giveMoreMobAr, device: "mob", lang: "AR" },
     ],
     chips: ["Work", "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
     description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+      "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    showDisabledLink: true,
   },
   {
     title: "Smart WIFI",
@@ -100,8 +122,16 @@ export const projects = [
       { image: smartWifiMobAr, device: "mob", lang: "AR" },
     ],
     chips: ["Work", "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/business/smart-wi-fi/",
   },
   {
     title: "Apple Business Manager",
@@ -112,8 +142,14 @@ export const projects = [
       { image: appleBusiManagerMobAr, device: "mob", lang: "AR" },
     ],
     chips: ["Work", "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
     description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+      "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     link: "https://www.ooredoo.qa/web/en/business/ict-solutions/apple-business-manager/",
   },
   {
@@ -125,8 +161,15 @@ export const projects = [
       { image: sdnconnectMobAr, device: "mob", lang: "AR" },
     ],
     chips: ["Work", "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
     description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+      "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/business/local-connectivity/sdn-connect/",
   },
   {
     title: "Upgrade To 5G",
@@ -137,7 +180,14 @@ export const projects = [
       { image: upgradeTo5gMobAr, device: "mob", lang: "AR" },
     ],
     chips: ["Work", "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
     description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, jQuery, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+      "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/upgrade-to-5g/",
   },
 ];

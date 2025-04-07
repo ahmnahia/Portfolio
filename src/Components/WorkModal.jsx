@@ -3,17 +3,28 @@ import { IoCloseSharp } from "react-icons/io5";
 import Image from "next/image";
 import clsx from "clsx";
 import "viewerjs/dist/viewer.css";
-import { FaDesktop, FaMobileScreenButton, FaExpand } from "react-icons/fa6";
+import {
+  FaDesktop,
+  FaMobileScreenButton,
+  FaExpand,
+  FaGithub,
+} from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import useWorkModalHook from "@/hooks/useWorkModalHook";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/styles/WorkModal.css";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export default function WorkModal({ open, toggleModal, selectedProject }) {
   const {
-    state: { workState, personalState },
+    state: { workState, personalState, projectStack },
     changeLanguageOrDevice,
   } = useWorkModalHook(open, selectedProject);
 
@@ -28,7 +39,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
     >
       <div
         className={clsx(
-          "bg-transparent w-full h-full p-10 max-sm:p-2 relative flex flex-col justify-between"
+          "bg-transparent w-full h-full p-10 pb-0 max-sm:p-2 max-sm:pb-0 relative flex flex-col justify-between"
         )}
       >
         <div>
@@ -125,78 +136,146 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                     ))}
                   </ul>
                 </div>
-              ) : personalState && personalState.sliderSettings.beforeChange ? (
+              ) : personalState ? (
                 <div className="personal-slider-div">
-                  <Slider {...personalState.sliderSettings} className="">
-                    {personalState.images.map((ei, idx) => (
-                      <div
-                        key={idx}
-                        className={clsx(
-                          "personal-img-div",
-                          personalState.currentSlideIdx + 1 == idx ||
-                            (personalState.currentSlideIdx ==
-                              personalState.images.length - 1 &&
-                              idx == 0)
-                            ? "translate-x-[-180px]"
-                            : "translate-x-0",
-                          personalState.currentSlideIdx - 1 == idx ||
-                            (personalState.currentSlideIdx == 0 &&
-                              idx == personalState.images.length - 1)
-                            ? "translate-x-[180px]"
-                            : "translate-x-0",
-                          Math.abs(personalState.currentSlideIdx - idx) >= 2
-                            ? "opacity-0"
-                            : "opacity-100"
-                        )}
-                      >
-                        <Image
-                          className="w-full h-full"
-                          src={ei}
-                          alt="Project Screenshot"
-                        />
-                      </div>
-                    ))}
-                  </Slider>
+                  {personalState.sliderSettings.beforeChange && (
+                    <Slider {...personalState.sliderSettings} className="">
+                      {personalState.images.map((ei, idx) => (
+                        <div
+                          key={idx}
+                          className={clsx(
+                            "personal-img-div",
+                            personalState.currentSlideIdx + 1 == idx ||
+                              (personalState.currentSlideIdx ==
+                                personalState.images.length - 1 &&
+                                idx == 0)
+                              ? "translate-x-[-180px]"
+                              : "translate-x-0",
+                            personalState.currentSlideIdx - 1 == idx ||
+                              (personalState.currentSlideIdx == 0 &&
+                                idx == personalState.images.length - 1)
+                              ? "translate-x-[180px]"
+                              : "translate-x-0",
+                            Math.abs(personalState.currentSlideIdx - idx) >= 2
+                              ? "opacity-0"
+                              : "opacity-100"
+                          )}
+                        >
+                          <Image
+                            className="w-full h-full"
+                            src={ei}
+                            alt="Project Screenshot"
+                          />
+                        </div>
+                      ))}
+                    </Slider>
+                  )}
+                  <div>
+                    <ul id="images">
+                      {personalState.fullScreenImages.map((ei, idx) => (
+                        <li className="hidden" key={idx}>
+                          <Image
+                            id="image"
+                            alt="hidden fullscreen img"
+                            src={ei}
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ) : (
                 <></>
               )}
               <div className="mt-8  text-center flex flex-col items-center">
-                <h3 className="text-4xl max-lg:text-2xl ">
+                {/* title & desc */}
+                <h3 className="text-4xl max-lg:text-2xl">
                   {selectedProject.title}
                 </h3>
                 <p className="font-normal text-2xl max-lg:text-lg  mt-4 mb-8 max-sm:mt-2 max-w-[900px] text-zinc-600 dark:text-zinc-400 ">
                   {selectedProject.description}
                 </p>
               </div>
+              {projectStack && (
+                <div className=" flex justify-center">
+                  {/* stack */}
+                  <div className="flex flex-wrap justify-center gap-4 p-4">
+                    {projectStack.map((es) => (
+                      <TooltipProvider delayDuration={0}>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <span className="inline-block text-4xl max-sm:text-4xl text-zinc-600 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-orange-400 transition-colors duration-500">
+                              {es.icon}
+                            </span>
+                          </TooltipTrigger>
+                          <TooltipContent className="font-normal">
+                            <p>{es.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-center max-sm:my-4 max-sm:py-4">
-          <div className="flex gap-3 flex-wrap">
+        <div className="flex w-full justify-center max-sm:mt-4 ">
+          <div className="flex gap-3 flex-wrap items-start py-4">
             <div
-              className="flex items-center gap-1 text-2xl max-sm:text-lg group cursor-pointer"
+              className="flex items-center gap-1 group cursor-pointer"
               onClick={() => {
                 document.getElementById("image").click();
               }}
             >
-              <span className=" p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
+              <span className="text-2xl max-sm:text-lg p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
                 <FaExpand />
               </span>
               <span className="text-xl max-sm:text-lg ">View Full Page</span>
             </div>
-            <div className=" text-2xl max-sm:text-lg group cursor-pointer my-4">
-              <a
-                href={selectedProject.link}
-                className="text-xl max-sm:text-lg flex items-center gap-1"
-                target="_blank"
-              >
-                <span className=" p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
-                  <FaExternalLinkAlt />
-                </span>
-                <span className="text-xl max-sm:text-lg">Link</span>
-              </a>
-            </div>
+            {selectedProject.githubLink && (
+              <div className="group cursor-pointer">
+                <a
+                  href={selectedProject.githubLink}
+                  className="text-2xl max-sm:text-lg flex items-center gap-1"
+                  target="_blank"
+                >
+                  <span className=" p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
+                    <FaGithub />
+                  </span>
+                  <span className="text-xl max-sm:text-lg">Github</span>
+                </a>
+              </div>
+            )}
+            {(selectedProject.link || selectedProject.showDisabledLink) && (
+              <div className="group cursor-pointer">
+                <TooltipProvider delayDuration={0}>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <a
+                        href={selectedProject.link}
+                        className={clsx(
+                          "text-2xl max-sm:text-lg flex items-center gap-1",
+                          selectedProject.showDisabledLink &&
+                            "cursor-not-allowed opacity-50"
+                        )}
+                        target="_blank"
+                      >
+                        <span className=" p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
+                          <FaExternalLinkAlt />
+                        </span>
+                        <span className="text-xl max-sm:text-lg">Link</span>
+                      </a>
+                    </TooltipTrigger>
+                    {selectedProject.showDisabledLink && (
+                      <TooltipContent className="font-normal">
+                        <p>Sorry, this webpage is down.</p>
+                      </TooltipContent>
+                    )}
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            )}
           </div>
         </div>
       </div>

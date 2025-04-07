@@ -5,6 +5,8 @@ import Hero2 from "@/Components/2/Hero";
 import AboutMe2 from "@/Components/2/AboutMe2";
 import Work from "@/Components/Work";
 import Contact from "@/Components/Contact";
+import Footer from "@/Components/Footer";
+
 export default function Home() {
   return (
     <div className="">
@@ -17,7 +19,7 @@ export default function Home() {
         <Work />
         <Contact />
       </main>
-      <footer className=""></footer>
+      <Footer />
     </div>
   );
 }

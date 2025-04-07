@@ -143,6 +143,7 @@ export default function useWorkModalHook(open, selectedProject) {
           currentSlideIdx: 0,
         }
       : undefined,
+    projectStack: selectedProject.stack,
   });
 
   const changeLanguageOrDevice = (lang, device) => {
@@ -181,8 +182,11 @@ export default function useWorkModalHook(open, selectedProject) {
       document.documentElement.style.overflow = "hidden"; // remove scroll
       document.body.style.overflow = "hidden"; // for older browsers (optional)
 
-      if (state.workState) {
-        const gallery = new Viewer(document.getElementById("images"), {
+      const imagesEle = document.getElementById("images");
+      if (imagesEle) {
+        console.log("entered?!?!?");
+
+        const gallery = new Viewer(imagesEle, {
           inline: false,
           viewed() {
             // viewer.zoomTo(1);

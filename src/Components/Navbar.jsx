@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navbarSections } from "@/constants";
 import { MdMenu, MdClose } from "react-icons/md";
 import ThemeToggle from "./ThemeToggle";
@@ -8,13 +8,20 @@ import { scrollToSection } from "@/helper";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // const scrollToSection = (id) => {
-  //   const section = document.querySelector(id);
-  //   window.scrollTo({
-  //     top: section.offsetTop - 100,
-  //     behavior: "smooth",
-  //   });
-  // };
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-ani");
+        } else {
+            // entry.target.classList.remove("show-ani");
+        }
+      });
+    });
+
+    const hiddenElements = [...document.querySelectorAll("section"), document.querySelector("nav")];
+    hiddenElements.forEach((ei) => observer.observe(ei));
+  }, []);
 
   return (
     <nav className="w-full h-[70px] bg-blue-50 dark:bg-zinc-800 mx-auto fixed nav-bar-sec z-50">

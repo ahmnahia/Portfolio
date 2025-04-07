@@ -99,7 +99,8 @@
     transition: transform 4.3s cubic-bezier(0.19, 1, 0.22, 1);
   }
 
-  .about-sec-title::after {
+  .about-sec-title::after,
+  .custom-stroke-text {
     content: "01";
     font-size: 172px;
     font-weight: bold;
@@ -109,6 +110,12 @@
     position: absolute;
     transform: translate(-10px, -130px);
     font-family: monospace;
+  }
+
+  .custom-stroke-text {
+    content: unset;
+    position: relative;
+    transform: unset;
   }
 
   .side-page-svg {
@@ -125,6 +132,25 @@
   .work-modal-bg-svg-dark {
     /* background-color: #ffffff; */
     background-image: url("../assets/svgs/topographyDark.svg");
+  }
+
+  nav {
+    transition: filter 1000ms cubic-bezier(0.4, 0, 0.2, 1);;
+    /* transition-duration: ; */
+    filter: blur(2px);
+  }
+
+  nav.show-ani {
+    filter: blur(0px);
+  }
+
+
+  section {
+    @apply opacity-0  transition-all duration-1000;
+  }
+
+  .show-ani {
+    @apply opacity-100;
   }
 
   @media (max-width: 1000px) {

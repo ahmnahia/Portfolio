@@ -11,7 +11,6 @@ export const sendMessage = async (data) => {
     html: `<h1>A Message Thorugh the Portfolio Contact Form </h1><h3>From: ${data.name} - ${data.email}</h3> <h4>Message:</h4><p>${data.message}</p>`,
   });
   if (error) {
-    console.log(error);
     return { messageSent: true, error: true };
   } else {
     return { messageSent: true, error: false };

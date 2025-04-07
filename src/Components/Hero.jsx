@@ -1,4 +1,3 @@
-import LottieAnimation from "@/Components/LottieAnimation";
 import { FaCircleArrowDown } from "react-icons/fa6";
 
 export default function Hero() {
@@ -20,7 +19,6 @@ export default function Hero() {
           </a>
         </div>
         <div className=" shadow-md rounded-lg md:w-[350px] lg:w-[450px] xl:w-[650px] ">
-          <LottieAnimation />
         </div>
         {/* </div> */}
       </div>
