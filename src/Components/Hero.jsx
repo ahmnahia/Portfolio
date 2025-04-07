@@ -48,9 +48,9 @@ export default function Hero() {
             Ahmad Abounahia
           </h1>
           <p className="text-xl  mt-5 text-zinc-800 dark:text-white font-normal">
-            I’m a computer science graduate and I'm passionate about software
-            development. I enjoy working with web development and always looking
-            for ways to learn and improve.
+            I{"'"}m a computer science graduate and I{"'"}m passionate about
+            software development. I enjoy working with web development and
+            always looking for ways to learn and improve.
           </p>
           <div
             className="mt-8 text-xl flex gap-3 items-center text-blue-black dark:text-white   cursor-pointer  bottom-0 max-lg:justify-center"

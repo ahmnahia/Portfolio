@@ -139,7 +139,10 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               ) : personalState ? (
                 <div className="personal-slider-div">
                   {personalState.sliderSettings.beforeChange && (
-                    <Slider {...personalState.sliderSettings} className="animate-opacity-on-image-change translate-y-0">
+                    <Slider
+                      {...personalState.sliderSettings}
+                      className="animate-opacity-on-image-change translate-y-0"
+                    >
                       {personalState.images.map((ei, idx) => (
                         <div
                           key={idx}
@@ -200,8 +203,8 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                 <div className=" flex justify-center">
                   {/* stack */}
                   <div className="flex flex-wrap justify-center gap-4 p-4">
-                    {projectStack.map((es) => (
-                      <TooltipProvider delayDuration={0}>
+                    {projectStack.map((es, idx) => (
+                      <TooltipProvider delayDuration={0} key={idx}>
                         <Tooltip>
                           <TooltipTrigger>
                             <span className="inline-block text-4xl max-sm:text-4xl text-zinc-600 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-orange-400 transition-colors duration-500">
