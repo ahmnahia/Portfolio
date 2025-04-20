@@ -118,6 +118,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                           id="image"
                           src={eachImage.image}
                           alt="screenshot"
+                          loading="eager"
                           className={clsx(
                             "absolute cursor-zoom-in rounded-md w-full",
                             workState.device == eachImage.device &&
@@ -167,6 +168,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                           <Image
                             className="w-full h-full"
                             src={ei}
+                            loading="eager"
                             alt="Project Screenshot"
                           />
                         </div>
