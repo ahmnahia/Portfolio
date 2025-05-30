@@ -9,6 +9,24 @@
   .cus-color-transition {
     @apply transition-colors duration-300;
   }
+
+  /* styles for the button that has a transitino when hovered */
+  .common-ltr-btn-parent {
+    @apply text-lg font-normal bg-white shadow-lg dark:bg-zinc-900 text-black dark:text-white rounded-sm  cursor-pointer relative;
+  }
+
+  .common-ltr-btn-trans-span {
+    @apply absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm;
+  }
+
+  .common-ltr-btn-icon-span {
+    @apply text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-sm:rounded-sm z-10;
+  }
+
+  .common-ltr-btn-label-span {
+    @apply px-5 group-hover:text-white z-10 font-bold max-sm:hidden;
+  }
+  /* END */
 }
 
 @layer utilities {

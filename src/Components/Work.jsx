@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
-import { MdOutlineOpenInNew } from "react-icons/md";
+import { MdOutlineOpenInNew, MdArrowRightAlt } from "react-icons/md";
 import WorkModal from "./WorkModal";
 import { projects } from "@/constants";
 import Image from "next/image";
+import ButtonWithIcon from "./ButtonWithIcon";
 
 export default function Work() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,11 +25,11 @@ export default function Work() {
           <h6 className="text-blue-400 dark:text-orange-400 text-xl my-6 max-sm:text-center">
             Some of My Work...
           </h6>
-          <div className="flex gap-x-5 gap-y-14 flex-wrap mt-12 justify-center z-10">
+          <div className="flex gap-x-5 gap-y-14 flex-wrap mt-12 justify-between z-10">
             {projects.map((ep, idx) => (
               <div
                 key={idx}
-                className="w-[31%] flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
+                className="w-[32%] flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
                 onClick={() => {
                   toggleModal();
                   setSelectedProject(projects[idx]);
@@ -77,6 +78,30 @@ export default function Work() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="flex justify-end container  mt-8">
+          {/* view all projects */}
+          {/* <div className="text-lg font-normal bg-white shadow-lg dark:shadow-none dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative">
+            <a
+              href="https://www.linkedin.com/in/ahmad-abounahia-191502285/"
+              className="flex items-center"
+              target="_blank"
+            >
+              <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
+              <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-md:rounded-sm z-10">
+                <MdArrowRightAlt />
+              </span>
+              <span className="px-5 group-hover:text-white z-10 font-bold">
+                View All Projects
+              </span>
+            </a>
+          </div> */}
+          <ButtonWithIcon
+            label={"View All Projects"}
+            icon={<MdArrowRightAlt />}
+            internalLink={"/projects"}
+            hideLabelOnMobile={false}
+          />
         </div>
         {isModalOpen && (
           <WorkModal

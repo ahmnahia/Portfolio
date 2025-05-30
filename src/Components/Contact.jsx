@@ -6,6 +6,7 @@ import { IoIosSend } from "react-icons/io";
 import { sendMessage } from "@/serverActions/contactForm";
 import ContactMessageStatusToast from "./ContactMessageStatusToast";
 import { Loader2 } from "lucide-react";
+import ButtonWithIcon from "./ButtonWithIcon";
 
 export default function Contact() {
   const [messageStatus, setMessageStatus] = useState({
@@ -44,33 +45,19 @@ export default function Contact() {
         </h1>
         <div className="mt-24 p-12 py-20 max-md:px-6 border-zinc-400/20 border-2 rounded-xl shadow-md relative">
           <div className="absolute top-[-30px] flex flex-wrap gap-6">
-            <div className="text-lg font-normal bg-white shadow-lg dark:shadow-none dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative">
-              <a href="mailto:me@ahmadnahia.com" className="flex items-center">
-                <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
-                <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-md:rounded-sm z-10">
-                  <IoMailOutline />
-                </span>
-                <span className="px-5 group-hover:text-white z-10 font-bold max-md:hidden">
-                  me@ahmadnahia.com
-                </span>
-              </a>
-            </div>
+            <ButtonWithIcon
+              label={"me@ahmadnahia.com"}
+              icon={<IoMailOutline />}
+              hrefLink={"mailto:me@ahmadnahia.com"}
+            />
 
-            <div className="text-lg  font-normal bg-white shadow-lg dark:shadow-none dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative">
-              <a
-                href="https://www.linkedin.com/in/ahmad-abounahia-191502285/"
-                className="flex items-center"
-                target="_blank"
-              >
-                <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
-                <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-md:rounded-sm z-10">
-                  <IoLogoLinkedin />
-                </span>
-                <span className="px-5 group-hover:text-white z-10 font-bold max-md:hidden">
-                  Ahmad Abounahia
-                </span>
-              </a>
-            </div>
+            <ButtonWithIcon
+              label={"Ahmad Abounahia"}
+              icon={<IoLogoLinkedin />}
+              hrefLink={
+                "https://www.linkedin.com/in/ahmad-abounahia-191502285/"
+              }
+            />
           </div>
           <form onSubmit={formAction} id="contact-form">
             <div className="flex gap-10 flex-wrap">
@@ -118,17 +105,17 @@ export default function Contact() {
                 //   }, 6000);
                 // }}
                 disabled={isLoading}
-                className="text-lg flex items-center font-normal bg-white shadow-lg dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative"
+                className="common-ltr-btn-parent group flex items-center"
               >
-                <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
-                <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-sm:rounded-sm z-10">
+                <span className="common-ltr-btn-trans-span"></span>
+                <span className="common-ltr-btn-icon-span">
                   {isLoading ? (
                     <Loader2 className="animate-spin" />
                   ) : (
                     <IoIosSend />
                   )}
                 </span>
-                <span className="px-5 group-hover:text-white z-10 font-bold max-sm:hidden">
+                <span className="common-ltr-btn-label-span">
                   Send Message
                 </span>
               </button>
