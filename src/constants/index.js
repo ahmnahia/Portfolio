@@ -73,6 +73,8 @@ export const technologiesUsed = [
   { icon: <FaLinux />, name: "Linux" },
 ];
 
+export const PROJECT_CATEGORIES = { PERSONAL: "Personal", WORK: "Work" };
+
 export const projects = [
   {
     title: "Portfolio",
@@ -84,7 +86,7 @@ export const projects = [
       portfolioMessageSent,
     ],
     fullScreenImages: [portfolioFullScreenDesk, portfolioFullScreenMob],
-    chips: ["Personal", "Next.js"],
+    chips: [PROJECT_CATEGORIES.PERSONAL, "Next.js"],
     description:
       "My personal portfolio website, built using Next.js to showcase my work and skills in web development.",
     stack: [
@@ -102,7 +104,7 @@ export const projects = [
       { image: giveMoreMobEn, device: "mob", lang: "EN" },
       { image: giveMoreMobAr, device: "mob", lang: "AR" },
     ],
-    chips: ["Work", "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -121,7 +123,7 @@ export const projects = [
       { image: smartWifiMobEn, device: "mob", lang: "EN" },
       { image: smartWifiMobAr, device: "mob", lang: "AR" },
     ],
-    chips: ["Work", "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -141,7 +143,7 @@ export const projects = [
       { image: appleBusiManagerMobEn, device: "mob", lang: "EN" },
       { image: appleBusiManagerMobAr, device: "mob", lang: "AR" },
     ],
-    chips: ["Work", "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -160,7 +162,7 @@ export const projects = [
       { image: sdnconnectMobEn, device: "mob", lang: "EN" },
       { image: sdnconnectMobAr, device: "mob", lang: "AR" },
     ],
-    chips: ["Work", "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -179,7 +181,7 @@ export const projects = [
       { image: upgradeTo5gMobEn, device: "mob", lang: "EN" },
       { image: upgradeTo5gMobAr, device: "mob", lang: "AR" },
     ],
-    chips: ["Work", "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },

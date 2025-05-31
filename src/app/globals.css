@@ -152,13 +152,13 @@
     background-image: url("../assets/svgs/topographyDark.svg");
   }
 
-  nav {
+  .nav-bar-sec {
     transition: filter 1000ms cubic-bezier(0.4, 0, 0.2, 1);;
     /* transition-duration: ; */
     filter: blur(2px);
   }
 
-  nav.show-ani {
+  .nav-bar-sec.show-ani {
     filter: blur(0px);
   }
 

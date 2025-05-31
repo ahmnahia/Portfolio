@@ -21,6 +21,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/Components/ui/tooltip";
+import StackTooltip from "./StackTooltip";
 
 export default function WorkModal({ open, toggleModal, selectedProject }) {
   const {
@@ -206,18 +207,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
                   {/* stack */}
                   <div className="flex flex-wrap justify-center gap-4 p-4">
                     {projectStack.map((es, idx) => (
-                      <TooltipProvider delayDuration={0} key={idx}>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <span className="inline-block text-4xl max-sm:text-4xl text-zinc-600 hover:text-blue-600 dark:text-zinc-400 dark:hover:text-orange-400 transition-colors duration-500">
-                              {es.icon}
-                            </span>
-                          </TooltipTrigger>
-                          <TooltipContent className="font-normal">
-                            <p>{es.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
+                      <StackTooltip icon={es.icon} name={es.name} key={idx} />
                     ))}
                   </div>
                 </div>
@@ -236,7 +226,7 @@ export default function WorkModal({ open, toggleModal, selectedProject }) {
               <span className="text-2xl max-sm:text-lg p-2 rounded-full text-blue-500 dark:text-orange-600 group-hover:scale-125 transition-all">
                 <FaExpand />
               </span>
-              <span className="text-xl max-sm:text-lg ">View Full Page</span>
+              <span className="text-xl max-sm:text-lg">View Full Page</span>
             </div>
             {selectedProject.githubLink && (
               <div className="group cursor-pointer">

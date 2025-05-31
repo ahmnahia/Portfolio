@@ -29,7 +29,7 @@ export default function Work() {
             {projects.map((ep, idx) => (
               <div
                 key={idx}
-                className="w-[32%] flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
+                className="lg:flex-1 lg:min-w-[400px]  flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"
                 onClick={() => {
                   toggleModal();
                   setSelectedProject(projects[idx]);
@@ -81,21 +81,6 @@ export default function Work() {
         </div>
         <div className="flex justify-end container  mt-8">
           {/* view all projects */}
-          {/* <div className="text-lg font-normal bg-white shadow-lg dark:shadow-none dark:bg-zinc-900 text-black dark:text-white rounded-sm group cursor-pointer relative">
-            <a
-              href="https://www.linkedin.com/in/ahmad-abounahia-191502285/"
-              className="flex items-center"
-              target="_blank"
-            >
-              <span className="absolute left-0 top-0 h-full w-0 group-hover:bg-blue-500 dark:group-hover:bg-orange-700 transition-all duration-150 ease-linear group-hover:w-full rounded-sm "></span>
-              <span className="text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-md:rounded-sm z-10">
-                <MdArrowRightAlt />
-              </span>
-              <span className="px-5 group-hover:text-white z-10 font-bold">
-                View All Projects
-              </span>
-            </a>
-          </div> */}
           <ButtonWithIcon
             label={"View All Projects"}
             icon={<MdArrowRightAlt />}

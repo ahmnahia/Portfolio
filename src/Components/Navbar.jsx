@@ -19,7 +19,7 @@ export default function Navbar() {
       });
     });
 
-    const hiddenElements = [...document.querySelectorAll("section"), document.querySelector("nav")];
+    const hiddenElements = [...document.querySelectorAll("section"), document.querySelector(".nav-bar-sec")];
     hiddenElements.forEach((ei) => observer.observe(ei));
   }, []);
 
