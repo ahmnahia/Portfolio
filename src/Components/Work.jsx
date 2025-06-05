@@ -26,7 +26,7 @@ export default function Work() {
             Some of My Work...
           </h6>
           <div className="flex gap-x-5 gap-y-14 flex-wrap mt-12 justify-between z-10">
-            {projects.map((ep, idx) => (
+            {projects.slice(0,6).map((ep, idx) => (
               <div
                 key={idx}
                 className="lg:flex-1 lg:min-w-[400px]  flex flex-col max-lg:w-[47%] max-sm:w-[100%] p-5 border-2 border-zinc-400/20 dark:border-zinc-800/30 shadow-lg rounded-lg group cursor-pointer"

@@ -39,7 +39,7 @@ export default function CategoryCard({
         >
           {title}
         </p>
-        <p className="mt-4 font-normal">{description}</p>
+        <p className="mt-4 font-normal text-zinc-500 dark:text-zinc-400">{description}</p>
       </div>
     </div>
   );

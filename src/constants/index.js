@@ -41,6 +41,12 @@ import smartWifiDeskEn from "@/assets/workScreenshots/smart-wifi-desk-en.png";
 import smartWifiMobAr from "@/assets/workScreenshots/smart-wifi-mob-ar.png";
 import smartWifiMobEn from "@/assets/workScreenshots/smart-wifi-mob-en.png";
 
+import appleTvUpdateDeskAr from "@/assets/workScreenshots/apple-tv-update-desk-ar.png";
+import appleTvUpdateDeskEn from "@/assets/workScreenshots/apple-tv-update-desk-en.png";
+import appleTvUpdateMobAr from "@/assets/workScreenshots/apple-tv-update-mob-ar.png";
+import appleTvUpdateMobEn from "@/assets/workScreenshots/apple-tv-update-mob-en.png";
+
+
 // portfolio imports
 import portfolioHero from "@/assets/personalScreenshots/portfolio/hero.png";
 import portfolioProjects from "@/assets/personalScreenshots/portfolio/projects.png";
@@ -49,6 +55,17 @@ import portfolioContact from "@/assets/personalScreenshots/portfolio/contact.png
 import portfolioMessageSent from "@/assets/personalScreenshots/portfolio/messagesent.png";
 import portfolioFullScreenDesk from "@/assets/personalScreenshots/portfolio/fullscreen-desk.png";
 import portfolioFullScreenMob from "@/assets/personalScreenshots/portfolio/fullscreen-mob.png";
+
+// mysnippetboard imports
+import mysnippetboardHero from "@/assets/personalScreenshots/mySnippetBoard/hero.png";
+import mysnippetboardFeatures from "@/assets/personalScreenshots/mySnippetBoard/features.png";
+import mysnippetboardHowToUse from "@/assets/personalScreenshots/mySnippetBoard/howToUse.png";
+import mysnippetboardFullscreenDesk from "@/assets/personalScreenshots/mySnippetBoard/fullscreen-desk.png";
+import mysnippetboardFullscreenMob from "@/assets/personalScreenshots/mySnippetBoard/fullscreen-mob.png";
+import mysnippetboardFullscreenApp from "@/assets/personalScreenshots/mySnippetBoard/fullscreen-app.png";
+import mysnippetboardapp1 from "@/assets/personalScreenshots/mySnippetBoard/app-1.png";
+import mysnippetboardapp2 from "@/assets/personalScreenshots/mySnippetBoard/app-2.png";
+import mysnippetboardapp3 from "@/assets/personalScreenshots/mySnippetBoard/app-3.png";
 
 export const navbarSections = [
   { name: "About", href: "#about-me" },
@@ -76,6 +93,28 @@ export const technologiesUsed = [
 export const PROJECT_CATEGORIES = { PERSONAL: "Personal", WORK: "Work" };
 
 export const projects = [
+  {
+    title: "MySnippetBoard",
+    images: [
+      mysnippetboardHero,
+      mysnippetboardFeatures,
+      mysnippetboardHowToUse,
+      mysnippetboardapp1,
+      mysnippetboardapp2,
+      mysnippetboardapp3,
+    ],
+    fullScreenImages: [mysnippetboardFullscreenDesk, mysnippetboardFullscreenMob, mysnippetboardFullscreenApp],
+    chips: [PROJECT_CATEGORIES.PERSONAL, "Next.js"],
+    description:
+      "I created MySnippetBoard in my free time  to improve my web development skills while building something useful. It helps users organize code snippets efficiently.",
+    stack: [
+      { icon: <FaReact />, name: "React" },
+      { icon: <RiTailwindCssFill />, name: "Tailwind CSS" },
+      { icon: <RiNextjsFill />, name: "Next.js" },
+    ],
+    githubLink: "https://github.com/ahmnahia/my-snippet-board",
+    link: "https://mysnippetboard.xyz/",
+  },
   {
     title: "Portfolio",
     images: [
@@ -153,6 +192,25 @@ export const projects = [
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     link: "https://www.ooredoo.qa/web/en/business/ict-solutions/apple-business-manager/",
+  },
+  {
+    title: "Apple TV Update",
+    images: [
+      { image: appleTvUpdateDeskEn, device: "desk", lang: "EN" },
+      { image: appleTvUpdateDeskAr, device: "desk", lang: "AR" },
+      { image: appleTvUpdateMobEn, device: "mob", lang: "EN" },
+      { image: appleTvUpdateMobAr, device: "mob", lang: "AR" },
+    ],
+    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
+    description:
+      "Transformed Figma designs —intended for mobile users— into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/apple-tv-update/",
   },
   {
     title: "SDN Connect",

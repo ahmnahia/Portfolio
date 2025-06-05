@@ -39,7 +39,7 @@ export default function page() {
         <CategoryCard
           title={"Personal Projects"}
           description={
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, perferendis."
+            "A collection of self-initiated projects where practiced skills, and built tools that interest me."
           }
           icon={<IoPerson />}
           isActive={selectedCategory === PROJECT_CATEGORIES.PERSONAL}
@@ -50,7 +50,7 @@ export default function page() {
         <CategoryCard
           title={"Work Projects"}
           description={
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, excepturi!"
+            "Projects I contributed to as part of professional roles, focusing on real-world requirements, collaboration, and delivery."
           }
           icon={<GrOrganization />}
           isActive={selectedCategory === PROJECT_CATEGORIES.WORK}
