@@ -1,9 +1,9 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import AboutMe from "@/components/AboutMe";
-import Work from "@/components/Work";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Navbar from "@/components_temp/Navbar";
+import Hero from "@/components_temp/Hero";
+import AboutMe from "@/components_temp/AboutMe";
+import Work from "@/components_temp/Work";
+import Contact from "@/components_temp/Contact";
+import Footer from "@/components_temp/Footer";
 
 export default function Home() {
   return (

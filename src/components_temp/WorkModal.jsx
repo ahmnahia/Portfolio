@@ -20,7 +20,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components_temp/ui/tooltip";
 import StackTooltip from "./StackTooltip";
 
 export default function WorkModal({ open, toggleModal, selectedProject }) {

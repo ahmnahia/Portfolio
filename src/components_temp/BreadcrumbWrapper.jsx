@@ -5,7 +5,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components_temp/ui/breadcrumb";
 import { IoHome } from "react-icons/io5";
 
 export default function BreadcrumbWrapper({ pagename }) {
