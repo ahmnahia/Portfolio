@@ -11,7 +11,7 @@ import StackTooltip from "@/components/StackTooltip";
 import WorkModal from "@/components/WorkModal";
 import "./projects.css";
 
-export default function page() {
+export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState(
     PROJECT_CATEGORIES.PERSONAL
   );
