@@ -3,7 +3,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/Components/ui/tooltip";
+} from "@/components/ui/tooltip";
 
 export default function StackTooltip({ icon, name }) {
   return (

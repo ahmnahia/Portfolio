@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import BreadcrumbWrapper from "@/Components/BreadcrumbWrapper";
-import CategoryCard from "@/Components/projects/CategoryCard";
+import BreadcrumbWrapper from "@/components/BreadcrumbWrapper";
+import CategoryCard from "@/components/projects/CategoryCard";
 import { IoPerson } from "react-icons/io5";
 import { GrOrganization } from "react-icons/gr";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { PROJECT_CATEGORIES, projects } from "@/constants";
 import Image from "next/image";
-import StackTooltip from "@/Components/StackTooltip";
-import WorkModal from "@/Components/WorkModal";
+import StackTooltip from "@/components/StackTooltip";
+import WorkModal from "@/components/WorkModal";
 import "./projects.css";
 
 export default function page() {
