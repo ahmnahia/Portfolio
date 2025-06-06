@@ -9,6 +9,7 @@ import { PROJECT_CATEGORIES, projects } from "@/constants";
 import Image from "next/image";
 import StackTooltip from "@/Components/StackTooltip";
 import WorkModal from "@/Components/WorkModal";
+import "./projects.css";
 
 export default function page() {
   const [selectedCategory, setSelectedCategory] = useState(
@@ -27,15 +28,15 @@ export default function page() {
   }, [selectedCategory]);
 
   return (
-    <div className="container my-8 ">
+    <section className="container my-8 opacity-100">
       <BreadcrumbWrapper pagename={"Projects"} />
-      <div className="mt-12 text-6xl">
+      <div className="mt-12 text-6xl animate-fade-in animation-delay-0">
         <h1 className="w-fit">
           Projects
           <span className="block w-1/2 border-b-8 rounded-lg border-blue-400 dark:border-orange-400 mt-12"></span>
         </h1>
       </div>
-      <div className="mt-12 flex flex-wrap gap-8 ">
+      <div className="mt-12 flex flex-wrap gap-8 animate-fade-in animation-delay-200">
         <CategoryCard
           title={"Personal Projects"}
           description={
@@ -59,7 +60,7 @@ export default function page() {
           }}
         />
       </div>
-      <div className="mt-24 flex flex-col gap-24 max-md:gap-12">
+      <div className="mt-24 flex flex-col gap-24 max-md:gap-12 animate-fade-in animation-delay-400">
         {filteredProjects.map((ep, idx) => (
           <div
             key={ep.title}
@@ -118,6 +119,6 @@ export default function page() {
           }}
         />
       )}
-    </div>
+    </section>
   );
 }
