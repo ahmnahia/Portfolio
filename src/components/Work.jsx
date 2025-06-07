@@ -42,7 +42,7 @@ export default function Work() {
                       src={
                         ep.chips.includes("Work")
                           ? ep.images[0].image
-                          : ep.images[0]
+                          : ep.fullScreenImages[0]
                       }
                       alt={ep.title}
                       className="w-full rounded-lg group-hover:scale-110 group-hover:blur-[1px] transition-all ease-in-out duration-500"
