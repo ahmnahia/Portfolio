@@ -20,13 +20,20 @@
   }
 
   .common-ltr-btn-icon-span {
-    @apply text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-sm:rounded-sm z-10;
+    @apply text-4xl bg-blue-500 dark:bg-orange-700 text-white px-3 py-3 rounded-l-sm max-md:rounded-sm z-10;
   }
 
   .common-ltr-btn-label-span {
-    @apply px-5 group-hover:text-white z-10 font-bold max-sm:hidden;
+    @apply px-5 group-hover:text-white z-10 font-bold max-md:hidden;
   }
   /* END */
+
+  @media (min-width:640px) and (max-width:727px) {
+    /* for the chips labels in work section */
+    .between-640-727 {
+      font-size: 11px;
+    }
+  }
 }
 
 @layer utilities {

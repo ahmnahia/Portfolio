@@ -48,7 +48,7 @@ export default function Work() {
                       className="w-full rounded-lg group-hover:scale-110 group-hover:blur-[1px] transition-all ease-in-out duration-500"
                     />
                   </div>
-                  <div className="absolute left-4 bottom-[-15px] flex gap-4">
+                  <div className="absolute left-4 bottom-[-15px] flex gap-4 between-640-727">
                     {ep.chips.map((echip, idx) => (
                       <div
                         className="rounded-sm bg-blue-500 text-white dark:bg-orange-600  py-2 px-6"
@@ -86,6 +86,7 @@ export default function Work() {
             icon={<MdArrowRightAlt />}
             internalLink={"/projects"}
             hideLabelOnMobile={false}
+            iconSpanCustomStyles="!rounded-r-none"
           />
         </div>
         {isModalOpen && (

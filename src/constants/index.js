@@ -143,7 +143,7 @@ export const projects = [
       { image: giveMoreMobEn, device: "mob", lang: "EN" },
       { image: giveMoreMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -162,7 +162,7 @@ export const projects = [
       { image: smartWifiMobEn, device: "mob", lang: "EN" },
       { image: smartWifiMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -182,7 +182,7 @@ export const projects = [
       { image: appleBusiManagerMobEn, device: "mob", lang: "EN" },
       { image: appleBusiManagerMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -201,7 +201,7 @@ export const projects = [
       { image: appleTvUpdateMobEn, device: "mob", lang: "EN" },
       { image: appleTvUpdateMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -220,7 +220,7 @@ export const projects = [
       { image: sdnconnectMobEn, device: "mob", lang: "EN" },
       { image: sdnconnectMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },
@@ -239,7 +239,7 @@ export const projects = [
       { image: upgradeTo5gMobEn, device: "mob", lang: "EN" },
       { image: upgradeTo5gMobAr, device: "mob", lang: "AR" },
     ],
-    chips: [PROJECT_CATEGORIES.WORK, "Static"],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
     stack: [
       { icon: <FaHtml5 />, name: "HTML" },
       { icon: <FaCss3Alt />, name: "CSS" },

@@ -7,38 +7,52 @@ export default function ButtonWithIcon({
   internalLink,
   hanldeOnClick,
   label,
+  iconSpanCustomStyles = "",
   hideLabelOnMobile = true,
 }) {
   return (
     <div
       className="common-ltr-btn-parent group"
-    //   onClick={hanldeOnClick}
+      //   onClick={hanldeOnClick}
     >
       {hrefLink ? (
         <a href={hrefLink} className="flex items-center" target="_blank">
-          <ButtonContent icon={icon} label={label} hideLabelOnMobile={hideLabelOnMobile}/>
+          <ButtonContent
+            icon={icon}
+            label={label}
+            hideLabelOnMobile={hideLabelOnMobile}
+            iconSpanCustomStyles={iconSpanCustomStyles}
+          />
         </a>
       ) : (
         <Link href={internalLink} className="flex items-center">
-          <ButtonContent icon={icon} label={label} hideLabelOnMobile={hideLabelOnMobile}/>
+          <ButtonContent
+            icon={icon}
+            label={label}
+            hideLabelOnMobile={hideLabelOnMobile}
+            iconSpanCustomStyles={iconSpanCustomStyles}
+          />
         </Link>
       )}
     </div>
   );
 }
 
-function ButtonContent({ icon, label, hideLabelOnMobile }) {
+function ButtonContent({
+  icon,
+  label,
+  hideLabelOnMobile,
+  iconSpanCustomStyles,
+}) {
   return (
     <>
       <span className="common-ltr-btn-trans-span"></span>
-      <span className="common-ltr-btn-icon-span">
+      <span className={clsx("common-ltr-btn-icon-span", iconSpanCustomStyles)}>
         {icon}
       </span>
       <span
         className={clsx(
-          `common-ltr-btn-label-span ${
-            !hideLabelOnMobile && "max-md:block"
-          }`
+          `common-ltr-btn-label-span ${!hideLabelOnMobile && "max-md:block"}`
         )}
       >
         {label}
