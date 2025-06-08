@@ -113,7 +113,7 @@ export const projects = [
       { icon: <RiNextjsFill />, name: "Next.js" },
     ],
     githubLink: "https://github.com/ahmnahia/my-snippet-board",
-    link: "https://mysnippetboard.xyz/",
+    link: "https://mysnippetboard.ahmadnahia.com/",
   },
   {
     title: "Portfolio",

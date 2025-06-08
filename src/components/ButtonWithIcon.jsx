@@ -5,7 +5,6 @@ export default function ButtonWithIcon({
   icon,
   hrefLink,
   internalLink,
-  hanldeOnClick,
   label,
   iconSpanCustomStyles = "",
   hideLabelOnMobile = true,

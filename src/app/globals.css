@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  /* .container-cus {
-    @apply px-3 lg:max-w-[1750px] md:px-32;
-  } */
   .cus-color-transition {
     @apply transition-colors duration-300;
   }
@@ -26,7 +23,6 @@
   .common-ltr-btn-label-span {
     @apply px-5 group-hover:text-white z-10 font-bold max-md:hidden;
   }
-  /* END */
 
   @media (min-width:640px) and (max-width:727px) {
     /* for the chips labels in work section */
@@ -106,7 +102,6 @@
   }
 
   .blob-shape {
-    /* border-radius: 55% 45% 26% 74% / 47% 38% 62% 53%; */
     animation: blobAnimation 12s infinite ease-in-out;
   }
 

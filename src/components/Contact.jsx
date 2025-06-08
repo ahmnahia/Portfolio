@@ -95,15 +95,6 @@ export default function Contact() {
               <button
                 type="submit"
                 name="submit"
-                // onClick={() => {
-                //   setMessageStatus({messageSent: true, error: true});
-                //   setTimeout(() => {
-                //     setMessageStatus({
-                //       messageSent: false,
-                //       error: false,
-                //     });
-                //   }, 6000);
-                // }}
                 disabled={isLoading}
                 className="common-ltr-btn-parent group flex items-center"
               >
