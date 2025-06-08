@@ -63,7 +63,7 @@ export default function Contact() {
             <div className="flex gap-10 flex-wrap">
               <input
                 className="flex-1 bg-zinc-200 dark:bg-zinc-800 dark:text-white text-black p-3 font-normal rounded-md"
-                placeholder="Your Name"
+                placeholder="Name"
                 type="text"
                 id="name-input"
                 name="name"
