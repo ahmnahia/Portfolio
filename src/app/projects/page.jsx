@@ -36,7 +36,7 @@ export default function Projects() {
           <span className="block w-1/2 border-b-8 rounded-lg border-blue-400 dark:border-orange-400 mt-12"></span>
         </h1>
       </div>
-      <div className="mt-12 flex flex-wrap gap-8 animate-fade-in animation-delay-200">
+      <div className="mt-12 flex flex-wrap gap-8 animate-fade-in animation-delay-400">
         <CategoryCard
           title={"Personal Projects"}
           description={
@@ -60,7 +60,7 @@ export default function Projects() {
           }}
         />
       </div>
-      <div className="mt-24 flex flex-col gap-24 max-md:gap-12 animate-fade-in animation-delay-400">
+      <div className="mt-24 flex flex-col gap-24 max-md:gap-12 animate-fade-in animation-delay-800">
         {filteredProjects.map((ep, idx) => (
           <div
             key={ep.title}
