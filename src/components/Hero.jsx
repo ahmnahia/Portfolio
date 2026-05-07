@@ -8,50 +8,50 @@ export default function Hero() {
   const imgRef = useRef();
   const timeoutRef = useRef(null);
   const lastMousePos = useRef({ x: 0, y: 0 });
+
+  const onMouseMove = (event) => {
+    if (!imgRef.current || timeoutRef.current) return;
+
+    if (window.screen.width < 700) {
+      // not really enough space for transforming the image
+      imgRef.current.style.transform = `translate(0px, 0px)`;
+      return;
+    }
+
+    timeoutRef.current = requestAnimationFrame(() => {
+      const deltaX = event.clientX - lastMousePos.current.x;
+      const deltaY = event.clientY - lastMousePos.current.y;
+
+      lastMousePos.current = { x: event.clientX, y: event.clientY };
+
+      const moveX =
+        deltaX < 0 ? Math.max(deltaX * 0.6, -92) : Math.min(deltaX * 0.6, 92);
+      const moveY =
+        deltaY < 0 ? Math.max(deltaY * 0.6, -20) : Math.min(deltaY * 0.6, 20);
+
+      imgRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
+
+      timeoutRef.current = null;
+    });
+  };
+
   return (
     <section
       className="md:h-[100vh] flex items-center overflow-x-hidden py-10"
       id="hero"
-      onMouseMove={(event) => {
-        if (!imgRef.current || timeoutRef.current) return;
-
-        if (window.screen.width < 700) {
-          // not really enough space for transforming the image
-          imgRef.current.style.transform = `translate(0px, 0px)`;
-          return;
-        }
-
-        timeoutRef.current = requestAnimationFrame(() => {
-          const deltaX = event.clientX - lastMousePos.current.x;
-          const deltaY = event.clientY - lastMousePos.current.y;
-
-          lastMousePos.current = { x: event.clientX, y: event.clientY };
-
-          const moveX =
-            deltaX < 0
-              ? Math.max(deltaX * 0.6, -92)
-              : Math.min(deltaX * 0.6, 92);
-          const moveY =
-            deltaY < 0
-              ? Math.max(deltaY * 0.6, -20)
-              : Math.min(deltaY * 0.6, 20);
-
-          imgRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`;
-
-          timeoutRef.current = null;
-        });
-      }}
+      onMouseMove={onMouseMove}
     >
-      <div className="container flex justify-between max-lg:flex-col max-lg:gap-32 max-lg:items-center gap-10 max-sm:gap-8">
+      <div className="container flex justify-between items-center max-lg:flex-col max-lg:gap-32 max-lg:items-center gap-10 max-sm:gap-8">
         <div className="max-lg:text-center flex-1 lg:relative animate-out">
           <h1 className="text-7xl  max-lg:text-5xl text-blue-500 dark:text-orange-600 ">
             Ahmad Abounahia
           </h1>
           <p className="text-xl  mt-5 text-zinc-800 dark:text-white font-normal">
-          Computer Science graduate passionate about software development, especially in web technologies. Continuously seeking opportunities to learn, grow, and build useful solutions.
+            Frontend Developer who enjoys building responsive web apps and
+            constantly learning new tools and technologies.
           </p>
-          <div
-            className="mt-8 text-xl flex gap-3 items-center text-blue-black dark:text-white   cursor-pointer  bottom-0 max-lg:justify-center"
+          <button
+            className="mt-8 text-xl flex gap-3 items-center text-blue-black dark:text-white cursor-pointer bottom-0 max-lg:justify-center w-full lg:w-fit"
             onClick={() => {
               scrollToSection("#about-me");
             }}
@@ -60,7 +60,7 @@ export default function Hero() {
               <IoArrowDownCircleOutline />
             </span>
             More About Me
-          </div>
+          </button>
         </div>
         <div className="w-auto flex justify-end relative flex-1">
           <Image

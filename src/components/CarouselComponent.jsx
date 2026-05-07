@@ -3,8 +3,8 @@ import { technologiesUsed } from "@/constants";
 export function CarouselComponent() {
 
   return (
-    <div className="logos group relative overflow-hidden whitespace-nowrap  py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] mt-20">
-      {[0, 0].map((_, idx) => (
+    <div className="group relative overflow-hidden whitespace-nowrap  py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] mt-20">
+      {Array.from({ length: 2 }).map((_, idx) => (
         <div className="animate-slide-left inline-block w-max" key={idx}>
           {technologiesUsed.map((eachTech, idx) => (
             <div

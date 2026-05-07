@@ -36,7 +36,7 @@ export default function Navbar() {
           <span className="text-blue-500 dark:text-orange-600">
             AhmadAbounahia
           </span>
-          <span className="text-gray-500 dark:text-gray-200">/{">"}</span>
+          <span className="text-gray-500 dark:text-gray-200"> /{">"}</span>
         </div>
         <div className="flex items-center gap-3 md:gap-10">
           <ThemeToggle />

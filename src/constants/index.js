@@ -46,6 +46,10 @@ import appleTvUpdateDeskEn from "@/assets/workScreenshots/apple-tv-update-desk-e
 import appleTvUpdateMobAr from "@/assets/workScreenshots/apple-tv-update-mob-ar.png";
 import appleTvUpdateMobEn from "@/assets/workScreenshots/apple-tv-update-mob-en.png";
 
+import plansForYourKidsDeskAr from "@/assets/workScreenshots/plans-for-your-kids-desk-ar.png";
+import plansForYourKidsDeskEn from "@/assets/workScreenshots/plans-for-your-kids-desk-en.png";
+import plansForYourKidsMobAr from "@/assets/workScreenshots/plans-for-your-kids-mob-ar.png";
+import plansForYourKidsMobEn from "@/assets/workScreenshots/plans-for-your-kids-mob-en.png";
 
 // portfolio imports
 import portfolioHero from "@/assets/personalScreenshots/portfolio/hero.png";
@@ -103,7 +107,11 @@ export const projects = [
       mysnippetboardapp2,
       mysnippetboardapp3,
     ],
-    fullScreenImages: [mysnippetboardFullscreenDesk, mysnippetboardFullscreenMob, mysnippetboardFullscreenApp],
+    fullScreenImages: [
+      mysnippetboardFullscreenDesk,
+      mysnippetboardFullscreenMob,
+      mysnippetboardFullscreenApp,
+    ],
     chips: [PROJECT_CATEGORIES.PERSONAL, "Next.js"],
     description:
       "I created MySnippetBoard in my free time  to improve my web development skills while building something useful. It helps users organize code snippets efficiently.",
@@ -136,6 +144,26 @@ export const projects = [
     githubLink: "https://github.com/ahmnahia/Portfolio",
   },
   {
+    title: "Plans For Your Kids",
+    images: [
+      { image: plansForYourKidsDeskEn, device: "desk", lang: "EN" },
+      { image: plansForYourKidsDeskAr, device: "desk", lang: "AR" },
+      { image: plansForYourKidsMobEn, device: "mob", lang: "EN" },
+      { image: plansForYourKidsMobAr, device: "mob", lang: "AR" },
+    ],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, JavaScript, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/plans-for-kids/",
+  },
+  {
     title: "Give More With Ooreedoo",
     images: [
       { image: giveMoreDeskEn, device: "desk", lang: "EN" },
@@ -153,26 +181,6 @@ export const projects = [
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     showDisabledLink: true,
-  },
-  {
-    title: "Smart WIFI",
-    images: [
-      { image: smartWifiDeskEn, device: "desk", lang: "EN" },
-      { image: smartWifiDeskAr, device: "desk", lang: "AR" },
-      { image: smartWifiMobEn, device: "mob", lang: "EN" },
-      { image: smartWifiMobAr, device: "mob", lang: "AR" },
-    ],
-    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
-    stack: [
-      { icon: <FaHtml5 />, name: "HTML" },
-      { icon: <FaCss3Alt />, name: "CSS" },
-      { icon: <RiJavascriptFill />, name: "JavaScript" },
-      { icon: <FaBootstrap />, name: "Bootstrap" },
-      { icon: <FaWordpress />, name: "WordPress" },
-    ],
-    description:
-      "Transformed Figma designs into a responsive website using HTML, CSS, JavaScript, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
-    link: "https://www.ooredoo.qa/web/en/business/smart-wi-fi/",
   },
   {
     title: "Apple Business Manager",
@@ -250,5 +258,25 @@ export const projects = [
     description:
       "Transformed Figma designs into a responsive website using HTML, CSS, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
     link: "https://www.ooredoo.qa/web/en/upgrade-to-5g/",
+  },
+  {
+    title: "Smart WIFI",
+    images: [
+      { image: smartWifiDeskEn, device: "desk", lang: "EN" },
+      { image: smartWifiDeskAr, device: "desk", lang: "AR" },
+      { image: smartWifiMobEn, device: "mob", lang: "EN" },
+      { image: smartWifiMobAr, device: "mob", lang: "AR" },
+    ],
+    chips: [PROJECT_CATEGORIES.WORK, "HTML/CSS"],
+    stack: [
+      { icon: <FaHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <RiJavascriptFill />, name: "JavaScript" },
+      { icon: <FaBootstrap />, name: "Bootstrap" },
+      { icon: <FaWordpress />, name: "WordPress" },
+    ],
+    description:
+      "Transformed Figma designs into a responsive website using HTML, CSS, JavaScript, and Bootstrap, ensuring the content was accurate, well-structured, and SEO-friendly in both Arabic and English, and finalized the deployment using WordPress.",
+    link: "https://www.ooredoo.qa/web/en/business/smart-wi-fi/",
   },
 ];

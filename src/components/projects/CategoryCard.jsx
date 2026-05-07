@@ -9,7 +9,7 @@ export default function CategoryCard({
 }) {
   return (
     <div
-      className="md:flex-1 max-md:w-full flex gap-4 bg-zinc-100 hover:shadow-lg  dark:bg-zinc-900 p-8 rounded-lg hover:-translate-y-3 transition-all cursor-pointer"
+      className="md:flex-1 max-md:w-full flex gap-4 bg-zinc-100 hover:shadow-lg  dark:bg-zinc-900 p-8 max-sm:p-4 rounded-lg hover:-translate-y-3 transition-all cursor-pointer"
       onClick={handleOnClick}
     >
       <div className="w-fit">

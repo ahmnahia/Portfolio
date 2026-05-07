@@ -28,7 +28,7 @@ export default function Projects() {
   }, [selectedCategory]);
 
   return (
-    <section className="container my-8 opacity-100">
+    <section className="container pt-8 pb-24 max-sm:pb-12 opacity-100">
       <BreadcrumbWrapper pagename={"Projects"} />
       <div className="mt-12 text-6xl animate-fade-in animation-delay-0">
         <h1 className="w-fit">
@@ -60,7 +60,7 @@ export default function Projects() {
           }}
         />
       </div>
-      <div className="mt-24 flex flex-col gap-24 max-md:gap-12 animate-fade-in animation-delay-800">
+      <div className="mt-24 max-sm:mt-12 flex flex-col gap-24 max-md:gap-12 animate-fade-in animation-delay-800">
         {filteredProjects.map((ep, idx) => (
           <div
             key={ep.title}
@@ -104,7 +104,6 @@ export default function Projects() {
                     ? ep.fullScreenImages[0]
                     : ep.images[0].image
                 }
-                className=""
               />
             </div>
           </div>
